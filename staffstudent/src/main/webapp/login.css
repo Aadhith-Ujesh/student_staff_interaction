@@ -1,0 +1,78 @@
+
+h1.head
+{
+    font-family: sans-serif;
+    position: relative;
+    text-align: center;
+    top:70px;
+    font-weight: 1000;
+    font-family: 'Taviraj', serif;
+}
+body
+{
+    margin: 0%;
+    padding: 0%;
+    background-image: url(https://images.shiksha.com/mediadata/images/1511247606phpZiZEJb.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Taviraj', serif;
+}
+.log h1{
+    font-weight: 1000;
+}
+.log
+{
+    border-radius: 25px;
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(255, 255, 255,0.8);
+    text-align: center;
+}
+.log input[type="text"],.log input[type="password"]
+{
+    border:0px;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 14px 10px;
+    width:200px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.log input[type="text"]:focus,.log input[type="password"]:focus
+{
+    border-radius: 30px;
+    width: 280px;
+    height: 30px;
+    border-color: rgb(53, 123, 255);
+}
+.log input[type="submit"]
+{
+    border:0px;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 14px 40px;
+    outline: none;
+    border-color: rgb(53, 123, 255);
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 20px;
+}
+.log input[type="submit"]:hover
+{
+background-color: rgb(53, 123, 255);;
+}
