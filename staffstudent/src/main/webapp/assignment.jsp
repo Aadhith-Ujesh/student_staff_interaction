@@ -15,6 +15,13 @@
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
+    <%
+        if(session.getAttribute("username")==null)
+        {
+            response.sendRedirect("login.jsp");
+        }
+        
+    %>
     <nav class="navbar">
         <h1>Madras Institute of Technology</h1>
             <div class="links">
