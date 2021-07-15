@@ -16,6 +16,9 @@
 </head>
 <body>
     <%
+         response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+         response.setHeader("Pragma","no-cache");
+         response.setHeader("Expires","0");
         if(session.getAttribute("username")==null)
         {
             response.sendRedirect("login.jsp");
@@ -28,7 +31,7 @@
                 <ul>
                         <li class="zy"><a href= "/staffstudent/assignment.jsp">Assignment</a></li>
                         <li class="zy"><a href= "/staffstudent/petition.jsp">Petition</a></li>   
-                        <li class="zy"><a href= "/staffstudent/Logout.java">Logout</a></li>   
+                        <li class="zy"><a href= "/staffstudent/Logout">Logout</a></li>   
                 </ul>
             </div>
     </nav>
