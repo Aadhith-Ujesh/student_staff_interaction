@@ -15,13 +15,20 @@
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
+    <%
+        if(session.getAttribute("username")==null)
+        {
+            response.sendRedirect("login.jsp");
+        }
+        
+    %>
     <nav class="navbar">
         <h1>Madras Institute of Technology</h1>
             <div class="links">
                 <ul>
-                        <li class="zy"><a href= "/assignment.html">Assignment</a></li>
-                        <li class="zy"><a href= "/petition.html">Petition</a></li>   
-                        <li class="zy"><a href= "/login.html">Logout</a></li>   
+                        <li class="zy"><a href= "/staffstudent/assignment.jsp">Assignment</a></li>
+                        <li class="zy"><a href= "/staffstudent/petition.jsp">Petition</a></li>   
+                        <li class="zy"><a href= "/staffstudent/login.jsp">Logout</a></li>   
                 </ul>
             </div>
     </nav>
