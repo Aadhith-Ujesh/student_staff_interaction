@@ -28,7 +28,7 @@
                 <ul>
                         <li class="zy"><a href= "/staffstudent/assignment.jsp">Assignment</a></li>
                         <li class="zy"><a href= "/staffstudent/petition.jsp">Petition</a></li>   
-                        <li class="zy"><a href= "/staffstudent/login.jsp">Logout</a></li>   
+                        <li class="zy"><a href= "/staffstudent/Logout">Logout</a></li>   
                 </ul>
             </div>
     </nav>
