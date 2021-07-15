@@ -11,6 +11,11 @@
     border-radius: 10px;
   
 }
+body
+{
+    margin: 0%;
+    padding: 0%;
+}
 p{
    padding: 10px;
 }
