@@ -1,3 +1,10 @@
+<%-- 
+    Document   : assignment
+    Created on : 15 Jul, 2021, 7:55:38 PM
+    Author     : USERi
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>

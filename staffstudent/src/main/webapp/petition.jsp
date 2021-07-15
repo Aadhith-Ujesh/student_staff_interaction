@@ -1,3 +1,10 @@
+<%-- 
+    Document   : petition
+    Created on : 15 Jul, 2021, 7:56:18 PM
+    Author     : USERi
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>

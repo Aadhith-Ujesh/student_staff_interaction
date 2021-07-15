@@ -1,3 +1,10 @@
+<%-- 
+    Document   : login
+    Created on : 15 Jul, 2021, 7:54:38 PM
+    Author     : USERi
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +19,9 @@
 </head>
 <body>
     <h1 class="head">STUDENT-TEACHER INTERACTION PAGE</h1>  
-    <form class="log" action="" method="POST">      
+    <form class="log" action="Login" method="POST">      
         <h1>LOGIN</h1>
-        <input type="text" name="name" placeholder="Username">
+        <input type="text" name="uname" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
         <input type="submit" value="Login">
     </form>
