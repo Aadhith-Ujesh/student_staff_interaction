@@ -35,5 +35,8 @@
                 </ul>
             </div>
     </nav>
+    <div class="petition">
+        <h1 style="color: blue;">Assignments</h1>
+    </div>
 </body>
 </html>
