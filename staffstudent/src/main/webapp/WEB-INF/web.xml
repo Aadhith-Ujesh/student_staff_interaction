@@ -18,6 +18,15 @@
         <url-pattern>/Logout</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+        <servlet-name>LoginDao</servlet-name>
+        <servlet-class>com.login.dao.LoginDao</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginDao</servlet-name>
+        <url-pattern>/LoginDao</url-pattern>
+    </servlet-mapping>
+    
     <session-config>
         <session-timeout>
             30
