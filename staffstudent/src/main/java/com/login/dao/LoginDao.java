@@ -13,6 +13,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.*;
 /**
  *
  * @author USERi
@@ -20,7 +21,7 @@ import java.sql.SQLException;
 public class LoginDao 
 {
     String sql = "select * from clogin where user=? and pass=?";
-    String url = "jdbc:mysql//localhost:3306/login";
+    String url = "jdbc:mysql://localhost:3306/login";
     String username = "root";
     String password = "Vishak1@3";
     public boolean check(String uname,String pass) throws SQLException
