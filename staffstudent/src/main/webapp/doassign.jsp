@@ -9,11 +9,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+     <%  
+    response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+        response.setHeader("Pragma","no-cache");
+        response.setHeader("Expires","0");
+        if(session.getAttribute("username")==null)
+        {
+             response.sendRedirect("login.jsp") ;
+        }
+        %>
     <nav class="navbar">
         <h1>Madras Institute of Technology</h1>
             <div class="links">
                 <ul>
-                        <li class="zy"><a href= "/staffstudent/doassign.jsp">Assignment</a></li>
+                       <li class="zy"><a href= "/staffstudent/doassign.jsp">Assignment</a></li>
                         <li class="zy"><a href= "/staffstudent/petition.jsp">Petition</a></li>   
                         <li class="zy"><a href= "/staffstudent/Logout">Logout</a></li>   
                 </ul>

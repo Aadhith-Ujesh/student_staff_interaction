@@ -1,3 +1,9 @@
+<%-- 
+    Document   : createassign
+    Created on : 18-Jul-2021, 2:48:31 pm
+    Author     : SUDHARSAN
+--%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,28 +11,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="home1.css">
+    <link rel="stylesheet" href="createassign.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <!-- 
+        <%  
+    response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+        response.setHeader("Pragma","no-cache");
+        response.setHeader("Expires","0");
+        if(session.getAttribute("username")==null)
+        {
+            response.sendRedirect("login.jsp");
+        }
+        %>
+    --> 
     <nav class="navbar">
         <h1>Madras Institute of Technology</h1>
             <div class="links">
                 <ul>
-                        <li class="zy"><a href= "/staffstudent/doassign.jsp">Assignment</a></li>
-                        <li class="zy"><a href= "/staffstudent/petition.jsp">Petition</a></li>   
+                        <li class="zy"><a href= "/staffstudent/tassignment.jsp">Assignment</a></li>
+                        <li class="zy"><a href= "/staffstudent/tpetition.jsp">Petition</a></li>   
                         <li class="zy"><a href= "/staffstudent/Logout">Logout</a></li>   
                 </ul>
             </div>
     </nav>
-    <div class="petition">
-        
-        <h1 style="position: absolute; margin-top: 50px;">Assignments:</h1>
-        <div id="cards" style="margin-top: 130px;">
-
-        </div>
-    </div>
-    <footer style="background-color:rgb(73, 18, 18);position:absolute;margin-top: 100%;border: 2px solid rgb(0, 0, 0);">
+    <div class="split">
+        <form  class="cassign">
+        TITLE OF THE ASSIGNMENT:<br>
+        <input type="text" name="title" required><br>
+        ASSIGNMENT DESCRIPTION:<br>
+        <textarea name=description rows="6" cols="30"></textarea>
+        <input type="button" value="CREATE">
+        </form>
+ </div> 
+ <footer style="background-color:#6264a7;position:absolute;margin-top: 100vh;">
         <div class="up">
             <div class="f" style="height: 100px;">
                  <h1 style="margin-left: 8px; font-size: 50px; padding-bottom: 0%;margin-bottom: 2px;">MIT</h1>
@@ -56,14 +75,7 @@
             </div>   
         </div>
     </footer>
-    <script>
-        var array = ["hi","one more","two","three","four","foive","sUDHARSAN"]
-        for(let i = 0; i<array.length; i++)
-        {
-            console.log("hi")
-            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + array[i] + "</div> </p>";
-        }
-
-    </script>
+</body>
+</html>
 </body>
 </html>

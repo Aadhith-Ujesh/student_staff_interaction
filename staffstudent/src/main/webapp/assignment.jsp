@@ -30,7 +30,7 @@
         <h1>Madras Institute of Technology</h1>
             <div class="links">
                 <ul>
-                        <li class="zy"><a href= "/staffstudent/assignment.jsp">Assignment</a></li>
+                        <li class="zy"><a href= "/staffstudent/doassign.jsp">Assignment</a></li>
                         <li class="zy"><a href= "/staffstudent/petition.jsp">Petition</a></li>   
                         <li class="zy"><a href= "/staffstudent/Logout">Logout</a></li>   
                 </ul>
