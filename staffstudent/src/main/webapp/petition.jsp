@@ -16,7 +16,7 @@
         response.setHeader("Expires","0");
         if(session.getAttribute("username")==null)
         {
-            response.sendRedirect("login.jsp");
+             response.sendRedirect("login.jsp") ;
         }
         %>
     <nav class="navbar">
