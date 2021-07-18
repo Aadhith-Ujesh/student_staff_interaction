@@ -29,7 +29,9 @@ public class Login extends HttpServlet {
     
         try {
             if(dao.check(user,pass))
-            {
+            {   
+                System.out.println(user);
+                System.out.println(pass);
                 HttpSession session=request.getSession();
                 session.setAttribute("username",user);
                 response.sendRedirect("assignment.jsp");
@@ -41,7 +43,8 @@ public class Login extends HttpServlet {
 //        response.sendRedirect("tassignment.jsp");
 //    }
             else
-            {
+            {   System.out.println(user);
+                System.out.println(pass);
                 response.sendRedirect("login.jsp");
             }   } catch (SQLException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);

@@ -21,14 +21,15 @@ import java.sql.*;
 public class LoginDao 
 {
     String sql = "select * from clogin where user=? and pass=?";
-    String url = "jdbc:mysql://localhost:3306/login";
+    String url = "jdbc:mysql://localhost:3306/login?autoReconnect=true&useSSL=false";
     String username = "root";
     String password = "Vishak1@3";
     public boolean check(String uname,String pass) throws SQLException
     {
         try {
             System.out.println("hi");
-            Class.forName("com.mysql.jdbc.Driver");
+//            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(url,username,password);
             PreparedStatement st = con.prepareStatement(sql);
             st.setString(1, uname);
