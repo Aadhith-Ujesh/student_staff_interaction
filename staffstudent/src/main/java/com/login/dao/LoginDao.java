@@ -27,7 +27,7 @@ public class LoginDao
     public boolean check(String uname,String pass) throws SQLException
     {
         try {
-            System.out.println("hi");
+    
 //            Class.forName("com.mysql.jdbc.Driver");
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(url,username,password);
@@ -35,9 +35,6 @@ public class LoginDao
             st.setString(1, uname);
             st.setString(2, pass);
             ResultSet rs = st.executeQuery();
-            System.out.println(rs);
-//            st.close();
-//            rs.close();
             if(rs.next())
             {
                 return true;

@@ -30,11 +30,16 @@ public class Login extends HttpServlet {
         try {
             if(dao.check(user,pass))
             {   
-                System.out.println(user);
-                System.out.println(pass);
                 HttpSession session=request.getSession();
                 session.setAttribute("username",user);
+                if(user.charAt(0)=='s')
+                {
                 response.sendRedirect("assignment.jsp");
+                }
+                else if(user.charAt(0)=='t')
+                {
+                    response.sendRedirect("tassignment.jsp");
+                }
             }
 //    else if(user.equals("teach") && pass.equals("123"))
 //    {
