@@ -25,10 +25,10 @@ public class assignmentdetails extends HttpServlet {
     
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException{
-    System.out.println("hi");
+    
     String title = request.getParameter("title");
     String desc = request.getParameter("description");
-    System.out.println("hi");
+    System.out.println("im at assignmentdetailsdao");
     assignmentdao dao = new assignmentdao();
         try {
             dao.update(title,desc);

@@ -34,7 +34,9 @@ public class Login extends HttpServlet {
                 session.setAttribute("username",user);
                 if(user.charAt(0)=='s')
                 {
-                response.sendRedirect("doassign.jsp");
+                   getas hi = new getas();
+                   hi.getassigns(request, response);
+//                response.sendRedirect("doassign.jsp");
                 }
                 else if(user.charAt(0)=='t')
                 {

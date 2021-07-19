@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.login.dao;
+package com.login;
 
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -24,20 +25,21 @@ import javax.servlet.http.HttpSession;
  *
  * @author USERi
  */
-public class Getassigndao extends HttpServlet
+public class getas extends HttpServlet
 {
-    String sql = "select * from assignments";
+    String sql = "select ?,? from assignments";
     String url = "jdbc:mysql://localhost:3306/login?autoReconnect=true&useSSL=false";
     String username = "root";
     String password = "Vishak1@3";
     
-    public void getassigns(HttpServletRequest request, HttpServletResponse response) throws SQLException
+    public void getassigns(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException
     {  System.out.println("hey");
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(url,username,password);
             PreparedStatement st = con.prepareStatement(sql);
             st.setString(1, "heading");
+            st.setString(2,"description");
             ArrayList<String> titles = new ArrayList<String>();
             ArrayList<String> decs = new ArrayList<String>();
             ResultSet rs = st.executeQuery();
@@ -55,10 +57,13 @@ public class Getassigndao extends HttpServlet
             HttpSession session=request.getSession();
             session.setAttribute("titles", titleArr);
             session.setAttribute("descs", descArr);
-//            response.sendRedirect("doassign.jsp");
+            System.out.println("session successful");
+            System.out.println(titleArr);
+            System.out.println(descArr);
+            response.sendRedirect("doassign.jsp");
             
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(LoginDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
         return ;
     }

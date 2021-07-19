@@ -17,9 +17,16 @@
         {
              response.sendRedirect("login.jsp") ;
         }
+        String [] titles = (String[]) session.getAttribute("titles");
+        out.print(titles);
+        out.print("........");
+        String [] decs = (String[]) session.getAttribute("decs");
+        out.print(decs);
         %>
-        
-      
+  <!--  <form action="getas" method="getassigns">   
+        <input type="submit" value = "refresh">
+    </form>-->
+<!--    <a href="/staffstudent/getas">refresh</a>-->
     <nav class="navbar">
         <h1>Madras Institute of Technology</h1>
             <div class="links">
@@ -37,7 +44,7 @@
 
         </div>
     </div>
-    <footer style="background-color:rgb(73, 18, 18);position:absolute;margin-top: 100%;border: 2px solid rgb(0, 0, 0);">
+    <footer style="background-color:rgb(73, 18, 18);position: absolute;margin-top: 100%;border: 2px solid rgb(0, 0, 0);">
         <div class="up">
             <div class="f" style="height: 100px;">
                  <h1 style="margin-left: 8px; font-size: 50px; padding-bottom: 0%;margin-bottom: 2px;">MIT</h1>
@@ -67,12 +74,14 @@
             </div>   
         </div>
     </footer>
+        
     <script>
-        var array = ["hi","one more","two","three","four","foive","sUDHARSAN"]
-        for(let i = 0; i<array.length; i++)
+        
+        var titles = '${titles}';
+        for(let i = 0; i<titles.length; i++)
         {
-            console.log("hi")
-            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + array[i] + "</div> </p>";
+            console.log("Im in javascript")
+            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + titles[i] + "</div> </p>";
         }
 
     </script>

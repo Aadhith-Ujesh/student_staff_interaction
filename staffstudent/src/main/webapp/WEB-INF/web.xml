@@ -8,9 +8,10 @@
         <servlet-name>assignmentdao</servlet-name>
         <servlet-class>com.login.dao.assignmentdao</servlet-class>
     </servlet>
+    
     <servlet>
-        <servlet-name>Getassigndao</servlet-name>
-        <servlet-class>com.login.dao.Getassigndao</servlet-class>
+        <servlet-name>getas</servlet-name>
+        <servlet-class>com.login.getas</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
@@ -44,9 +45,10 @@
         <servlet-name>assignmentdetails</servlet-name>
         <url-pattern>/assignmentdetails</url-pattern>
     </servlet-mapping>
+    
     <servlet-mapping>
-        <servlet-name>Getassigndao</servlet-name>
-        <url-pattern>/Getassigndao</url-pattern>
+        <servlet-name>getas</servlet-name>
+        <url-pattern>/getas</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
