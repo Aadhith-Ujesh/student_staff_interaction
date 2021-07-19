@@ -27,7 +27,7 @@ import javax.servlet.http.HttpSession;
  */
 public class getas extends HttpServlet
 {
-    String sql = "select ?,? from assignments";
+    String sql = "select * from assignments";
     String url = "jdbc:mysql://localhost:3306/login?autoReconnect=true&useSSL=false";
     String username = "root";
     String password = "Vishak1@3";
@@ -38,15 +38,16 @@ public class getas extends HttpServlet
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(url,username,password);
             PreparedStatement st = con.prepareStatement(sql);
-            st.setString(1, "heading");
-            st.setString(2,"description");
+//            st.setString(1, "heading");
+//            st.setString(2,"description");
             ArrayList<String> titles = new ArrayList<String>();
             ArrayList<String> decs = new ArrayList<String>();
             ResultSet rs = st.executeQuery();
-            while(rs.next())
+            while( rs.next() )
             {
                 titles.add(rs.getString(1));
                 decs.add(rs.getString(2));
+                
             }
             String[] titleArr = new String[titles.size()];
             titleArr = titles.toArray(titleArr);
@@ -58,8 +59,8 @@ public class getas extends HttpServlet
             session.setAttribute("titles", titleArr);
             session.setAttribute("descs", descArr);
             System.out.println("session successful");
-            System.out.println(titleArr);
-            System.out.println(descArr);
+//            System.out.println(titleArr.toString());
+//            System.out.println(descArr.toString());
             response.sendRedirect("doassign.jsp");
             
         } catch (ClassNotFoundException ex) {

@@ -18,10 +18,17 @@
              response.sendRedirect("login.jsp") ;
         }
         String [] titles = (String[]) session.getAttribute("titles");
-        out.print(titles);
-        out.print("........");
-        String [] decs = (String[]) session.getAttribute("decs");
-        out.print(decs);
+        String titlearr="";
+        for(int i=0;i<titles.length;i++)
+            {
+             titlearr += titles[i] +  "$";
+            }
+        String [] descs = (String[]) session.getAttribute("descs");
+        String descarr = "";
+        for(int i=0;i<descs.length;i++)
+        {   
+            descarr += descs[i] +  "$";
+        }
         %>
   <!--  <form action="getas" method="getassigns">   
         <input type="submit" value = "refresh">
@@ -77,11 +84,16 @@
         
     <script>
         
-        var titles = '${titles}';
-        for(let i = 0; i<titles.length; i++)
+        var titles = "<%=titlearr%>";
+        var description = "<%=descarr%>";
+        var titles = titles.split("$");
+        var description = description.split("$");
+        console.log(titles);
+        console.log(description);
+        for(let i = 0; i<titles.length-1; i++)
         {
-            console.log("Im in javascript")
-            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + titles[i] + "</div> </p>";
+            
+            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + titles[i] +"<br>"+description[i] + "</div> </p>";
         }
 
     </script>
