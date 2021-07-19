@@ -18,6 +18,8 @@
              response.sendRedirect("login.jsp") ;
         }
         %>
+        
+      
     <nav class="navbar">
         <h1>Madras Institute of Technology</h1>
             <div class="links">

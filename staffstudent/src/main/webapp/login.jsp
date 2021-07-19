@@ -20,7 +20,7 @@
 <body>
     <h1 class="head">STUDENT-TEACHER INTERACTION PAGE</h1>  
     <form class="log" action="Login" method="POST">      
-        <h1>LOGIN</h1>
+        <h1>LOGIN</h1>       
         <input type="text" name="uname" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
         <input type="submit" value="Login">

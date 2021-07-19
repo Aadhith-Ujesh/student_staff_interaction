@@ -4,11 +4,18 @@
         <servlet-name>Login</servlet-name>
         <servlet-class>com.login.Login</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>assignmentdao</servlet-name>
+        <servlet-class>com.login.dao.assignmentdao</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Getassigndao</servlet-name>
+        <servlet-class>com.login.dao.Getassigndao</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
     </servlet-mapping>
-    
     <servlet>
         <servlet-name>Logout</servlet-name>
         <servlet-class>com.login.Logout</servlet-class>
@@ -17,7 +24,6 @@
         <servlet-name>Logout</servlet-name>
         <url-pattern>/Logout</url-pattern>
     </servlet-mapping>
-    
     <servlet>
         <servlet-name>LoginDao</servlet-name>
         <servlet-class>com.login.dao.LoginDao</servlet-class>
@@ -26,7 +32,22 @@
         <servlet-name>LoginDao</servlet-name>
         <url-pattern>/LoginDao</url-pattern>
     </servlet-mapping>
-    
+    <servlet-mapping>
+        <servlet-name>assignmentdao</servlet-name>
+        <url-pattern>/assignmentdao</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>assignmentdetails</servlet-name>
+        <servlet-class>com.login.assignmentdetails</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>assignmentdetails</servlet-name>
+        <url-pattern>/assignmentdetails</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Getassigndao</servlet-name>
+        <url-pattern>/Getassigndao</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

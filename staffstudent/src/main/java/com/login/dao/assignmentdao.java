@@ -18,30 +18,30 @@ import java.sql.*;
  *
  * @author USERi
  */
-public class LoginDao 
+public class assignmentdao 
 {
-    String sql = "select * from clogin where user=? and pass=?";
+    String sql = "insert into assignments values(?,?)";
     String url = "jdbc:mysql://localhost:3306/login?autoReconnect=true&useSSL=false";
     String username = "root";
     String password = "Vishak1@3";
-    public boolean check(String uname,String pass) throws SQLException
-    {
+    public void update(String title,String desc) throws SQLException
+    {  System.out.println("hey");
         try {
-    
+            System.out.println(title);
 //            Class.forName("com.mysql.jdbc.Driver");
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(url,username,password);
             PreparedStatement st = con.prepareStatement(sql);
-            st.setString(1, uname);
-            st.setString(2, pass);
-            ResultSet rs = st.executeQuery();
-            if(rs.next())
-            {
-                return true;
-            }
+            st.setString(1, title);
+            st.setString(2, desc);
+            int result = st.executeUpdate();
+            System.out.println(result);
+            
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(LoginDao.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return false;
+        return ;
     }
 }
+
+    

@@ -38,7 +38,7 @@
   <div class="split">
         <form  class="teacher">
         <h1><u><b>ASSIGNMENTS</b></u></h1>
-        <input type="button" value="CREATE ASSIGNMENT">
+        <input type="button" value="CREATE ASSIGNMENT" onclick="window.location='createassign.jsp'">
         <input type="button" value="VIEW ASSIGNMENTS">
         </form>
  </div> 

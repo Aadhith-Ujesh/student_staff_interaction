@@ -37,12 +37,12 @@
             </div>
     </nav>
     <div class="split">
-        <form  class="cassign">
+        <form  class="cassign" action="assignmentdetails" method="POST">
         TITLE OF THE ASSIGNMENT:<br>
         <input type="text" name="title" required><br>
         ASSIGNMENT DESCRIPTION:<br>
-        <textarea name=description rows="6" cols="30"></textarea>
-        <input type="button" value="CREATE">
+        <textarea name="description" rows="6" cols="30"></textarea>
+        <input type="submit" value="CREATE">
         </form>
  </div> 
  <footer style="background-color:#6264a7;position:absolute;margin-top: 100vh;">
