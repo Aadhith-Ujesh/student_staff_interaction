@@ -8,10 +8,25 @@
         <servlet-name>assignmentdao</servlet-name>
         <servlet-class>com.login.dao.assignmentdao</servlet-class>
     </servlet>
-    
     <servlet>
         <servlet-name>getas</servlet-name>
         <servlet-class>com.login.getas</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Petitiondetails</servlet-name>
+        <servlet-class>com.login.Petitiondetails</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>petitiondao</servlet-name>
+        <servlet-class>com.login.dao.petitiondao</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>getpetition</servlet-name>
+        <servlet-class>com.login.getpetition</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>fetchandgo</servlet-name>
+        <servlet-class>com.login.fetchandgo</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
@@ -45,10 +60,25 @@
         <servlet-name>assignmentdetails</servlet-name>
         <url-pattern>/assignmentdetails</url-pattern>
     </servlet-mapping>
-    
     <servlet-mapping>
         <servlet-name>getas</servlet-name>
         <url-pattern>/getas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Petitiondetails</servlet-name>
+        <url-pattern>/Petitiondetails</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>petitiondao</servlet-name>
+        <url-pattern>/petitiondao</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>getpetition</servlet-name>
+        <url-pattern>/getpetition</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>fetchandgo</servlet-name>
+        <url-pattern>/fetchandgo</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -25,14 +25,14 @@ import javax.servlet.http.HttpSession;
  *
  * @author USERi
  */
-public class getas extends HttpServlet
+public class getpetition extends HttpServlet
 {
-    String sql = "select * from assignments";
+    String sql = "select * from petitions";
     String url = "jdbc:mysql://localhost:3307/login?autoReconnect=true&useSSL=false";
     String username = "root";
     String password = "sudharsan123!@";
     
-    public void getassigns(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException
+    public void getpet(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException
     {  System.out.println("hey");
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -40,28 +40,28 @@ public class getas extends HttpServlet
             PreparedStatement st = con.prepareStatement(sql);
 //            st.setString(1, "heading");
 //            st.setString(2,"description");
-            ArrayList<String> titles = new ArrayList<String>();
-            ArrayList<String> decs = new ArrayList<String>();
+            ArrayList<String> head = new ArrayList<String>();
+            ArrayList<String> dec = new ArrayList<String>();
             ResultSet rs = st.executeQuery();
             while( rs.next() )
             {
-                titles.add(rs.getString(1));
-                decs.add(rs.getString(2));
+                head.add(rs.getString(1));
+                dec.add(rs.getString(2));
                 
             }
-            String[] titleArr = new String[titles.size()];
-            titleArr = titles.toArray(titleArr);
+            String[] headArr = new String[head.size()];
+            headArr = head.toArray(headArr);
 
-            String[] descArr = new String[decs.size()];
-            descArr = decs.toArray(descArr);
+            String[] decArr = new String[dec.size()];
+            decArr = dec.toArray(decArr);
             
             HttpSession session=request.getSession();
-            session.setAttribute("titles", titleArr);
-            session.setAttribute("descs", descArr);
+            session.setAttribute("head", headArr);
+            session.setAttribute("dec", decArr);
             System.out.println("session successful");
 //            System.out.println(titleArr.toString());
 //            System.out.println(descArr.toString());
-            response.sendRedirect("doassign.jsp");
+            response.sendRedirect("tassignment.jsp");
             
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);

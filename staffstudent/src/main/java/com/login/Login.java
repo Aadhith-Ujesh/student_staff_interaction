@@ -40,7 +40,9 @@ public class Login extends HttpServlet {
                 }
                 else if(user.charAt(0)=='t')
                 {
-                    response.sendRedirect("tassignment.jsp");
+//                    response.sendRedirect("tassignment.jsp");
+                    getpetition hi = new getpetition();
+                    hi.getpet(request, response);
                 }
             }
 //    else if(user.equals("teach") && pass.equals("123"))

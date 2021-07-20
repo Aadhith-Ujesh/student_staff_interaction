@@ -18,9 +18,9 @@ import java.sql.*;
  *
  * @author USERi
  */
-public class assignmentdao 
+public class petitiondao 
 {
-    String sql = "insert into assignments values(?,?)";
+    String sql = "insert into petitions values(?,?)";
     String url = "jdbc:mysql://localhost:3307/login?autoReconnect=true&useSSL=false";
     String username = "root";
     String password = "sudharsan123!@";
@@ -43,5 +43,3 @@ public class assignmentdao
         return ;
     }
 }
-
-    

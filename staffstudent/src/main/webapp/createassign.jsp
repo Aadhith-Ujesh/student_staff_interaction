@@ -42,10 +42,10 @@
         <input type="text" name="title" required><br>
         ASSIGNMENT DESCRIPTION:<br>
         <textarea name="description" rows="6" cols="30"></textarea>
-        <input type="submit" value="CREATE">
+        <input type="submit" value="CREATE" >
         </form>
  </div> 
- <footer style="background-color:#6264a7;position:absolute;margin-top: 100vh;">
+ <footer style="background-color:rgb(73, 18, 18);position:absolute;margin-top: 100vh;">
         <div class="up">
             <div class="f" style="height: 100px;">
                  <h1 style="margin-left: 8px; font-size: 50px; padding-bottom: 0%;margin-bottom: 2px;">MIT</h1>
