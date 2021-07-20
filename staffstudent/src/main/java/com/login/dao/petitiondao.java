@@ -21,9 +21,9 @@ import java.sql.*;
 public class petitiondao 
 {
     String sql = "insert into petitions values(?,?)";
-    String url = "jdbc:mysql://localhost:3307/login?autoReconnect=true&useSSL=false";
+    String url = "jdbc:mysql://localhost:3306/login?autoReconnect=true&useSSL=false";
     String username = "root";
-    String password = "sudharsan123!@";
+    String password = "Vishak1@3";
     public void update(String title,String desc) throws SQLException
     {  System.out.println("hey");
         try {

@@ -93,7 +93,7 @@
         for(let i = 0; i<titles.length-1; i++)
         {
             
-            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + titles[i] +"<br>"+description[i] + "</div> </p>";
+            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + titles[i] +"<br>"+description[i] + "</p> </div> ";
         }
 
     </script>
