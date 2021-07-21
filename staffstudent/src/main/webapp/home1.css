@@ -1,3 +1,27 @@
+
+.assub{
+  text-align: right;
+  margin-right: 30px;
+}
+.assub input[type="submit"]
+{
+   
+   border: 2px solid black;
+   
+   outline: none;
+   border-color: rgb(0, 0, 0);
+   border-radius: 24px;
+   transition: 0.25s;
+   cursor: pointer;
+   
+}
+
+.assub input[type="submit"]:hover
+{
+    background-color: rgb(187, 104, 104);;
+}
+
+
 .hi{
    margin-left: 15px;
    width: 95vw;

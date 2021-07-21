@@ -93,7 +93,7 @@
         for(let i = 0; i<titles.length-1; i++)
         {
             
-            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + titles[i] +"<br>"+description[i] + "</p> </div> ";
+            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " +  titles[i] +"<br>"+description[i]  + "<form class = 'assub'> <input type='text'> <input type='submit' value='submit'> </form>" + "</p> </div>";
         }
 
     </script>
