@@ -1,3 +1,10 @@
+<%-- 
+    Document   : tviewpetition
+    Created on : 21-Jul-2021, 3:42:48 pm
+    Author     : SUDHARSAN
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,13 +24,13 @@
         {
              response.sendRedirect("login.jsp") ;
         }
-        String [] titles = (String[]) session.getAttribute("titles");
+        String [] titles = (String[]) session.getAttribute("head");
         String titlearr="";
         for(int i=0;i<titles.length;i++)
             {
              titlearr += titles[i] +  "$";
             }
-        String [] descs = (String[]) session.getAttribute("descs");
+        String [] descs = (String[]) session.getAttribute("dec");
         String descarr = "";
         for(int i=0;i<descs.length;i++)
         {   
@@ -38,8 +45,8 @@
         <h1>Madras Institute of Technology</h1>
             <div class="links">
                 <ul>
-                       <li class="zy"><a href= "/staffstudent/doassign.jsp">Assignment</a></li>
-                        <li class="zy"><a href= "/staffstudent/petition.jsp">Petition</a></li>   
+                       <li class="zy"><a href= "/staffstudent/tassignment.jsp">Assignment</a></li>
+                        <li class="zy"><a href= "/staffstudent/tpetition.jsp">Petition</a></li>   
                         <li class="zy"><a href= "/staffstudent/Logout">Logout</a></li>   
                 </ul>
             </div>
@@ -92,8 +99,8 @@
         console.log(description);
         for(let i = 0; i<titles.length-1; i++)
         {
-            console.log(titles[i]);
-            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " +  titles[i] +"<br>"+description[i]  + "<form class = 'assub' action='sumbitdetails' method='POST'> <input type='text' name='submitlink' > <input type='submit' value='submit'> </form>" + "</p> </div>";
+            
+            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + titles[i] +"<br>"+description[i] + "</div> </p>";
         }
 
     </script>

@@ -28,9 +28,9 @@ import javax.servlet.http.HttpSession;
 public class getas extends HttpServlet
 {
     String sql = "select * from assignments";
-    String url = "jdbc:mysql://localhost:3306/login?autoReconnect=true&useSSL=false";
+    String url = "jdbc:mysql://localhost:3307/login?autoReconnect=true&useSSL=false";
     String username = "root";
-    String password = "Vishak1@3";
+    String password = "sudharsan123!@";
     
     public void getassigns(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException
     {  System.out.println("hey");

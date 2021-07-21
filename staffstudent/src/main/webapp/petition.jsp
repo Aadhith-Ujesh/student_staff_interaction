@@ -33,7 +33,7 @@
         <form class="teacher">
             <h1><u><b>PETITION</b></u></h1>
             <input type="button" value="CREATE PETITION" onclick="window.location='createpetition.jsp'" >
-        <input type="button" value="VIEW PETITIONS">
+            <input type="button" value="VIEW PETITIONS" onclick="window.location='tviewpetition.jsp'" >
         </form>
  </div> 
     <footer style="background-color:rgb(73, 18, 18);position:absolute;margin-top: 100vh;">
