@@ -23,8 +23,9 @@ public class sumbitdetails extends HttpServlet {
     
     String link = request.getParameter("submitlink");
     System.out.println(link);
-    char i = link.charAt(0);
-    int id = Character.getNumericValue(i);
+//    char i = link.charAt(0);
+//    int id = Character.getNumericValue(i);
+    int id = Integer.parseInt(request.getParameter("id"))-1;
     System.out.println(id);
     System.out.println("im at sumbitdetailsdao");
     HttpSession session=request.getSession();

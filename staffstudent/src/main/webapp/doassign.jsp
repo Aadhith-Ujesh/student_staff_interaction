@@ -46,7 +46,7 @@
     </nav>
     <div class="petition">
         
-        <h1 style="position: absolute; margin-top: 50px;">Assignments:</h1>
+        <h1 style="position: absolute; margin-top: 50px;margin-left: 45% ;">ASSIGNMENTS</h1>
         <div id="cards" style="margin-top: 130px;">
 
         </div>
@@ -93,7 +93,7 @@
         for(let i = 0; i<titles.length-1; i++)
         {
             console.log(titles[i]);
-            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " +  titles[i] +"<br>"+description[i]  + "<form class = 'assub' action='sumbitdetails' method='POST'> <input type='text' name='submitlink' > <input type='submit' value='submit'> </form>" + "</p> </div>";
+            document.getElementById("cards").innerHTML+="<div class='hi'> <h2> " +  titles[i] +"</h2> <p><br>"+description[i]  + "<form class = 'assub' action='sumbitdetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "><input type='text' name='submitlink' > <input type='submit' value='submit'> </form>" + "</p> </div>";
         }
 
     </script>

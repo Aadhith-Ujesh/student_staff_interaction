@@ -109,12 +109,41 @@
         var aadhith = aadhith.split("$");
         var sudharsan = sudharsan.split("$");
         var aravind = aravind.split("$");
+        var a="";
+        var s="";
+        var ar="";
         console.log(titles);
         console.log(description);
         for(let i = 0; i<titles.length-1; i++)
         {
-            
-        document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + titles[i] +"<br>"+description[i]+"<br> Aadhith:" + "<a href='"+aadhith[i].slice(1)+"'>Submitted</a>" +"<br> Sudharsan:" + "<a href='"+sudharsan[i].slice(1)+"'>Submitted</a>" + "<br> Aravind:" + "<a href='"+aravind[i].slice(1)+"'>Submitted</a>" + "</p> </div> ";
+         if(aadhith[i]==="null")
+         {
+             a = "not submitted";
+             aadhith[i]="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fz%2Fnot-completed-rubber-stamp-grunge-design-dust-scratches-effects-can-be-easily-removed-clean-crisp-look-color-easily-83440416.jpg&f=1&nofb=1"
+         }
+         else
+         {
+             a = "submitted";
+         }
+         if(sudharsan[i]==="null")
+         {
+             s ="not submitted"
+             sudharsan[i]="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fz%2Fnot-completed-rubber-stamp-grunge-design-dust-scratches-effects-can-be-easily-removed-clean-crisp-look-color-easily-83440416.jpg&f=1&nofb=1"
+         }
+         else
+         {
+             s = "submitted";
+         }
+         if(aravind[i]==="null")
+         {
+             ar="not submitted"
+             aravind[i] = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fz%2Fnot-completed-rubber-stamp-grunge-design-dust-scratches-effects-can-be-easily-removed-clean-crisp-look-color-easily-83440416.jpg&f=1&nofb=1"
+         }
+         else
+         {
+             ar = "submitted";
+         }
+        document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + titles[i] +"<br>"+description[i]+"<br> Aadhith:" + "<a href='"+ aadhith[i]+"'>"+a+"</a>" +"<br> Sudharsan:" + "<a href='"+sudharsan[i]+"'>"+s+"</a>" + "<br> Aravind:" + "<a href='"+aravind[i]+"'>"+ar+"</a>" + "</p> </div> ";
         }
 
     </script>
