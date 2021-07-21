@@ -28,6 +28,14 @@
         <servlet-name>fetchandgo</servlet-name>
         <servlet-class>com.login.fetchandgo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>sumbitdetails</servlet-name>
+        <servlet-class>com.login.sumbitdetails</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>submitdao</servlet-name>
+        <servlet-class>com.login.dao.submitdao</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -76,9 +84,14 @@
         <servlet-name>getpetition</servlet-name>
         <url-pattern>/getpetition</url-pattern>
     </servlet-mapping>
+    
     <servlet-mapping>
-        <servlet-name>fetchandgo</servlet-name>
-        <url-pattern>/fetchandgo</url-pattern>
+        <servlet-name>sumbitdetails</servlet-name>
+        <url-pattern>/sumbitdetails</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>submitdao</servlet-name>
+        <url-pattern>/submitdao</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

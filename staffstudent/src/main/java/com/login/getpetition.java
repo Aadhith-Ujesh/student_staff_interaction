@@ -58,7 +58,7 @@ public class getpetition extends HttpServlet
             HttpSession session=request.getSession();
             session.setAttribute("head", headArr);
             session.setAttribute("dec", decArr);
-            System.out.println("session successful");
+            System.out.println("session successful for getpetition");
 //            System.out.println(titleArr.toString());
 //            System.out.println(descArr.toString());
 //            response.sendRedirect("tassignment.jsp");

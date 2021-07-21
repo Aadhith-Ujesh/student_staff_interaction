@@ -22,6 +22,7 @@
         for(int i=0;i<titles.length;i++)
             {
              titlearr += titles[i] +  "$";
+             out.println(titles[i]);
             }
         String [] descs = (String[]) session.getAttribute("descs");
         String descarr = "";
@@ -92,8 +93,8 @@
         console.log(description);
         for(let i = 0; i<titles.length-1; i++)
         {
-            
-            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " +  titles[i] +"<br>"+description[i]  + "<form class = 'assub'> <input type='text'> <input type='submit' value='submit'> </form>" + "</p> </div>";
+            console.log(titles[i]);
+            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " +  titles[i] +"<br>"+description[i]  + "<form class = 'assub' action='sumbitdetails' method='POST'> <input type='text' name='submitlink' > <input type='submit' value='submit'> </form>" + "</p> </div>";
         }
 
     </script>

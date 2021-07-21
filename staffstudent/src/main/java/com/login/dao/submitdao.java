@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.login.dao;
 
 import java.util.logging.Level;
@@ -18,24 +13,28 @@ import java.sql.*;
  *
  * @author USERi
  */
-public class assignmentdao 
+public class submitdao
 {
-    String sql = "insert into assignments(heading,description) values(?,?)";
+//    String sql = "insert into assignments values(?,?)";
     String url = "jdbc:mysql://localhost:3306/login?autoReconnect=true&useSSL=false";
     String username = "root";
     String password = "Vishak1@3";
-    public void update(String title,String desc) throws SQLException
+    public void update(String user, String link ,String title) throws SQLException
     {  System.out.println("hey");
         try {
-            System.out.println(title);
+            String sql = "UPDATE assignments SET "+ user +" = ? where heading = ?";
+            System.out.println(user);
 //            Class.forName("com.mysql.jdbc.Driver");
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(url,username,password);
             PreparedStatement st = con.prepareStatement(sql);
-            st.setString(1, title);
-            st.setString(2, desc);
+//            st.setString(1,user);
+            st.setString(1,link );
+            st.setString(2, title);
             int result = st.executeUpdate();
             System.out.println(result);
+            
+            return;
             
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(LoginDao.class.getName()).log(Level.SEVERE, null, ex);
@@ -43,5 +42,3 @@ public class assignmentdao
         return ;
     }
 }
-
-    

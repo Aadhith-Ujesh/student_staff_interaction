@@ -42,12 +42,17 @@ public class getas extends HttpServlet
 //            st.setString(2,"description");
             ArrayList<String> titles = new ArrayList<String>();
             ArrayList<String> decs = new ArrayList<String>();
+            ArrayList<String> aadhithsub = new ArrayList<String>();
+            ArrayList<String> sudharsansub = new ArrayList<String>();
+            ArrayList<String> aravindsub = new ArrayList<String>();
             ResultSet rs = st.executeQuery();
             while( rs.next() )
             {
                 titles.add(rs.getString(1));
                 decs.add(rs.getString(2));
-                
+                aadhithsub.add(rs.getString(3));
+                sudharsansub.add(rs.getString(4));
+                aravindsub.add(rs.getString(5));
             }
             String[] titleArr = new String[titles.size()];
             titleArr = titles.toArray(titleArr);
@@ -55,10 +60,23 @@ public class getas extends HttpServlet
             String[] descArr = new String[decs.size()];
             descArr = decs.toArray(descArr);
             
+            String[] aadhithArr = new String[aadhithsub.size()];
+            aadhithArr = decs.toArray(aadhithArr);
+            
+            String[] sudharsanArr = new String[sudharsansub.size()];
+            sudharsanArr = decs.toArray(sudharsanArr);
+            
+            String[] aravindArr = new String[aravindsub.size()];
+            aravindArr = decs.toArray(aravindArr);
+            
             HttpSession session=request.getSession();
             session.setAttribute("titles", titleArr);
             session.setAttribute("descs", descArr);
-            System.out.println("session successful");
+            session.setAttribute("aadhith", aadhithArr);
+            session.setAttribute("sudharsan", sudharsanArr);
+            session.setAttribute("aravind", aravindArr);
+            
+            System.out.println("session successful for getas");
 //            System.out.println(titleArr.toString());
 //            System.out.println(descArr.toString());
             return;
