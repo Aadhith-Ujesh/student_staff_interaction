@@ -18,6 +18,9 @@
              response.sendRedirect("login.jsp") ;
         }
         String [] titles = (String[]) session.getAttribute("titles");
+        String [] Aadhith = (String[]) session.getAttribute("aadhith");
+        String [] Sudharsan = (String[]) session.getAttribute("sudharsan");
+        String [] Aravind = (String[]) session.getAttribute("aravind");
         String titlearr="";
         for(int i=0;i<titles.length;i++)
             {
@@ -29,6 +32,21 @@
         {   
             descarr += descs[i] +  "$";
         }
+        String aadhitharr="";
+        for(int i=0;i<titles.length;i++)
+            {
+             aadhitharr += Aadhith[i] +  "$";
+            }
+        String sudharsanarr="";
+        for(int i=0;i<titles.length;i++)
+            {
+             sudharsanarr += Sudharsan[i] +  "$";
+            }
+        String aravindarr="";
+        for(int i=0;i<titles.length;i++)
+            {
+             aravindarr += Aravind[i] +  "$";
+            }
         %>
   
     <nav class="navbar">
@@ -83,14 +101,20 @@
         
         var titles = "<%=titlearr%>";
         var description = "<%=descarr%>";
+        var aadhith = "<%=aadhitharr%>";
+        var sudharsan = "<%=sudharsanarr%>";
+        var aravind = "<%=aravindarr%>";
         var titles = titles.split("$");
         var description = description.split("$");
+        var aadhith = aadhith.split("$");
+        var sudharsan = sudharsan.split("$");
+        var aravind = aravind.split("$");
         console.log(titles);
         console.log(description);
         for(let i = 0; i<titles.length-1; i++)
         {
             
-            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + titles[i] +"<br>"+description[i] + "</p> </div> ";
+        document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + titles[i] +"<br>"+description[i]+"<br> Aadhith:" + "<a href='"+aadhith[i].slice(1)+"'>Submitted</a>" +"<br> Sudharsan:" + "<a href='"+sudharsan[i].slice(1)+"'>Submitted</a>" + "<br> Aravind:" + "<a href='"+aravind[i].slice(1)+"'>Submitted</a>" + "</p> </div> ";
         }
 
     </script>

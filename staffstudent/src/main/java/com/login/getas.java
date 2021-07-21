@@ -28,9 +28,9 @@ import javax.servlet.http.HttpSession;
 public class getas extends HttpServlet
 {
     String sql = "select * from assignments";
-    String url = "jdbc:mysql://localhost:3307/login?autoReconnect=true&useSSL=false";
+    String url = "jdbc:mysql://localhost:3306/login?autoReconnect=true&useSSL=false";
     String username = "root";
-    String password = "sudharsan123!@";
+    String password = "Vishak1@3";
     
     public void getassigns(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException
     {  System.out.println("hey");
@@ -61,13 +61,13 @@ public class getas extends HttpServlet
             descArr = decs.toArray(descArr);
             
             String[] aadhithArr = new String[aadhithsub.size()];
-            aadhithArr = decs.toArray(aadhithArr);
+            aadhithArr = aadhithsub.toArray(aadhithArr);
             
             String[] sudharsanArr = new String[sudharsansub.size()];
-            sudharsanArr = decs.toArray(sudharsanArr);
+            sudharsanArr = sudharsansub.toArray(sudharsanArr);
             
             String[] aravindArr = new String[aravindsub.size()];
-            aravindArr = decs.toArray(aravindArr);
+            aravindArr = aravindsub.toArray(aravindArr);
             
             HttpSession session=request.getSession();
             session.setAttribute("titles", titleArr);
