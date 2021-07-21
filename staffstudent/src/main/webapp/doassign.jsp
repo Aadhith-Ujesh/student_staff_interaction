@@ -58,7 +58,7 @@
                  <p style="margin-left:8px ;">Madras Institute<br> of Technology</p>
             </div>
             <div class="f webhead" style="margin-left: 15%;">
-                <h1 style="font-size: 40px;">Team name</h1>
+                <h1 style="font-size: 40px;">TEAMS 2.0</h1>
             </div>
             <div class="clear made" style="margin-left: 21%;">
                 <p>

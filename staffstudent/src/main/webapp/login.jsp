@@ -18,7 +18,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@0,700;0,800;1,600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1 class="head">STUDENT-TEACHER INTERACTION PAGE</h1>  
+    <h1 class="head">TEAMS 2.0</h1>  
     <form class="log" action="Login" method="POST">      
         <h1>LOGIN</h1>       
         <input type="text" name="uname" placeholder="Username">

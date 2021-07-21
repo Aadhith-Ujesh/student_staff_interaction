@@ -65,7 +65,7 @@
                  <p style="margin-left:8px ;">Madras Institute<br> of Technology</p>
             </div>
             <div class="f webhead" style="margin-left: 15%;">
-                <h1 style="font-size: 40px;">Team name</h1>
+                <h1 style="font-size: 40px;">TEAMS 2.0</h1>
             </div>
             <div class="clear made" style="margin-left: 21%;">
                 <p>
@@ -73,7 +73,7 @@
                 </p>
             </div>
             <div class="clear made">
-                <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, </p>
+                <p> TEAMS 2.0 is designed by a trio. MS Teams takes 1 GB of memory which we consider as a waste of storage when we go back to offline classes. So this is an alternative to TEAMS 2.0. We hope MIT recognizes our website and makes it official. It contains all the features which are required during offline classes </p>
             </div>
         </div>
         <div>
