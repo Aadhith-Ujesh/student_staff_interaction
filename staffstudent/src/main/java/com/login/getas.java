@@ -61,7 +61,12 @@ public class getas extends HttpServlet
             System.out.println("session successful");
 //            System.out.println(titleArr.toString());
 //            System.out.println(descArr.toString());
-            response.sendRedirect("doassign.jsp");
+            return;
+//            String user = session.getAttribute("username").toString();
+//            if(user.charAt(0)=='s')
+//                response.sendRedirect("doassign.jsp");
+//            else
+//                response.sendRedirect("doassign.jsp");
             
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);

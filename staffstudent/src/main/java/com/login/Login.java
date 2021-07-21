@@ -32,17 +32,21 @@ public class Login extends HttpServlet {
             {   
                 HttpSession session=request.getSession();
                 session.setAttribute("username",user);
+                getas hi = new getas();
+                hi.getassigns(request, response);
+                getpetition hey = new getpetition();
+                hey.getpet(request, response);
                 if(user.charAt(0)=='s')
                 {
-                   getas hi = new getas();
-                   hi.getassigns(request, response);
-//                response.sendRedirect("doassign.jsp");
+//                   getas hi = new getas();
+//                   hi.getassigns(request, response);
+                 response.sendRedirect("doassign.jsp");
                 }
                 else if(user.charAt(0)=='t')
                 {
-//                    response.sendRedirect("tassignment.jsp");
-                    getpetition hi = new getpetition();
-                    hi.getpet(request, response);
+                    response.sendRedirect("tassignment.jsp");
+//                    getpetition hey = new getpetition();
+//                    hey.getpet(request, response);
                 }
             }
 //    else if(user.equals("teach") && pass.equals("123"))

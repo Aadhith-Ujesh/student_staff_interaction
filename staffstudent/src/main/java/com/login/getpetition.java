@@ -61,7 +61,8 @@ public class getpetition extends HttpServlet
             System.out.println("session successful");
 //            System.out.println(titleArr.toString());
 //            System.out.println(descArr.toString());
-            response.sendRedirect("tassignment.jsp");
+//            response.sendRedirect("tassignment.jsp");
+            return;
             
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
