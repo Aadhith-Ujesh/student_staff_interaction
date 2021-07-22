@@ -1,10 +1,2 @@
 # student_staff_interaction
-hi 
-
-hi motherfuckers from netbeans
-
-hannn
-
-gvhbjnkn
-
-awesome
+This is TEAMS 2.0
