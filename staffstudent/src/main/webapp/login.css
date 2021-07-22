@@ -1,4 +1,14 @@
-
+*{
+    font-family: 'Dosis', sans-serif;
+}
+#logo{
+    position: absolute;
+    max-width:100%;
+    width:100px;
+    height:auto;
+    margin-left: 35%;
+    margin-top: 15px;
+}
 h1.head
 {
     font-family: sans-serif;

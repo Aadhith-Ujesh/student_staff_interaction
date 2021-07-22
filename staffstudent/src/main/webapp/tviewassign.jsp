@@ -7,6 +7,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="home1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
      <%  out.println("hi");
@@ -49,8 +52,9 @@
             }
         %>
   
+    <img src="PicsArt_07-22-11.41.53.png" id="logo">
     <nav class="navbar">
-        <h1>Madras Institute of Technology</h1>
+        <h1 id="headi">TEAMS 2.0</h1>
             <div class="links">
                 <ul>
                        <li class="zy"><a href= "/staffstudent/tassignment.jsp">Assignment</a></li>
@@ -73,6 +77,7 @@
                  <p style="margin-left:8px ;">Madras Institute<br> of Technology</p>
             </div>
             <div class="f webhead" style="margin-left: 15%;">
+                <img src="PicsArt_07-22-11.41.53.png" id="logofoot">
                 <h1 style="font-size: 40px;">TEAMS 2.0</h1>
             </div>
             <div class="clear made" style="margin-left: 21%;">

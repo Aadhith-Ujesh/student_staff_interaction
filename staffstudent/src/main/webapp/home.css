@@ -1,4 +1,27 @@
-
+*{
+    font-family: 'Dosis', sans-serif;
+}
+#logo{
+  position: fixed;
+  max-width:100%;
+  width:100px;
+  height:auto;
+  margin-left: 0%;
+  margin-top: 0px;
+  z-index: 10;
+}
+#logofoot{
+  position: absolute;
+  max-width:100%;
+  width:100px;
+  height:auto;
+  margin-left: -90px;
+  margin-top: 0px;
+  z-index: 10;
+}
+#headi{
+  margin-left: 15%;
+}
 body{
  margin: 0%;
  padding: 0%;
