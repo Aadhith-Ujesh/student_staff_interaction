@@ -21,21 +21,35 @@ public class Login extends HttpServlet {
     
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException{
-
+       
     String user = request.getParameter("uname");
     String pass = request.getParameter("password");
-    
+    boolean k = true;
     LoginDao dao = new LoginDao();
-    
         try {
-            if(dao.check(user,pass))
+            k = dao.check(user,pass);
+        } catch (SQLException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        HttpSession session=request.getSession();
+        session.setAttribute("err",k);
+        
+            if(k)
             {   
-                HttpSession session=request.getSession();
+                
                 session.setAttribute("username",user);
                 getas hi = new getas();
-                hi.getassigns(request, response);
+        try {
+            hi.getassigns(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
                 getpetition hey = new getpetition();
-                hey.getpet(request, response);
+        try {
+            hey.getpet(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
                 if(user.charAt(0)=='s')
                 {
 //                   getas hi = new getas();
@@ -59,9 +73,8 @@ public class Login extends HttpServlet {
             {   System.out.println(user);
                 System.out.println(pass);
                 response.sendRedirect("login.jsp");
-            }   } catch (SQLException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-        }
+               
+            }   
         
     
 }
