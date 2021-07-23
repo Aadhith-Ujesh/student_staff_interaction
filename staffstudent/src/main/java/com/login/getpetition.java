@@ -28,9 +28,9 @@ import javax.servlet.http.HttpSession;
 public class getpetition extends HttpServlet
 {
     String sql = "select * from petitions";
-        String url = "jdbc:mysql://localhost:3307/login?autoReconnect=true&useSSL=false";
+    String url = "jdbc:mysql://localhost:3306/login?autoReconnect=true&useSSL=false";
     String username = "root";
-    String password = "sudharsan123!@";
+    String password = "Vishak1@3";
     
     public void getpet(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException
     {  System.out.println("hey");
@@ -42,12 +42,19 @@ public class getpetition extends HttpServlet
 //            st.setString(2,"description");
             ArrayList<String> head = new ArrayList<String>();
             ArrayList<String> dec = new ArrayList<String>();
+            ArrayList<String> aadhithlike = new ArrayList<String>();
+            ArrayList<String> sudharsanlike = new ArrayList<String>();
+            ArrayList<String> aravindlike = new ArrayList<String>();
+            
+            
             ResultSet rs = st.executeQuery();
             while( rs.next() )
             {
                 head.add(rs.getString(1));
                 dec.add(rs.getString(2));
-                
+                aadhithlike.add(rs.getString(3));
+                sudharsanlike.add(rs.getString(4));
+                aravindlike.add(rs.getString(5));
             }
             String[] headArr = new String[head.size()];
             headArr = head.toArray(headArr);
@@ -55,9 +62,26 @@ public class getpetition extends HttpServlet
             String[] decArr = new String[dec.size()];
             decArr = dec.toArray(decArr);
             
+            String[] aadlikeArr = new String[aadhithlike.size()];
+            aadlikeArr = aadhithlike.toArray(aadlikeArr);
+            
+            String[] sudlikeArr = new String[sudharsanlike.size()];
+            sudlikeArr = sudharsanlike.toArray(sudlikeArr);
+            
+            String[] arlikeArr = new String[aravindlike.size()];
+            arlikeArr = aravindlike.toArray(arlikeArr);
+            
+            int al = Integer.parseInt(aadlikeArr[0]);
+            int sl = Integer.parseInt(sudlikeArr[0]);
+            int arl = Integer.parseInt(arlikeArr[0]);
+            
+            
             HttpSession session=request.getSession();
             session.setAttribute("head", headArr);
             session.setAttribute("dec", decArr);
+            session.setAttribute("aadhithlike", al);
+            session.setAttribute("sudharsanlike", sl);
+            session.setAttribute("aravindlike", arl);
             System.out.println("session successful for getpetition");
 //            System.out.println(titleArr.toString());
 //            System.out.println(descArr.toString());

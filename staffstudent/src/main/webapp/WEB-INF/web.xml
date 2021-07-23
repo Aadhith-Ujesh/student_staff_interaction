@@ -36,6 +36,14 @@
         <servlet-name>submitdao</servlet-name>
         <servlet-class>com.login.dao.submitdao</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>likesdao</servlet-name>
+        <servlet-class>com.login.dao.likesdao</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>likedetails</servlet-name>
+        <servlet-class>com.login.likedetails</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -84,7 +92,6 @@
         <servlet-name>getpetition</servlet-name>
         <url-pattern>/getpetition</url-pattern>
     </servlet-mapping>
-    
     <servlet-mapping>
         <servlet-name>sumbitdetails</servlet-name>
         <url-pattern>/sumbitdetails</url-pattern>
@@ -92,6 +99,14 @@
     <servlet-mapping>
         <servlet-name>submitdao</servlet-name>
         <url-pattern>/submitdao</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>likesdao</servlet-name>
+        <url-pattern>/likesdao</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>likedetails</servlet-name>
+        <url-pattern>/likedetails</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

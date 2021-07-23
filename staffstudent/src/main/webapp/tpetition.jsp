@@ -27,18 +27,26 @@
         {
              response.sendRedirect("login.jsp") ;
         }
-        String [] titles = (String[]) session.getAttribute("head");
         String titlearr="";
+        String descarr = "";
+        int al = (Integer)session.getAttribute("aadhithlike");
+        int sl = (Integer)session.getAttribute("sudharsanlike");
+        int arl = (Integer)session.getAttribute("aravindlike");
+        if(al+sl+arl > 1){
+        String [] titles = (String[]) session.getAttribute("head");
+        
         for(int i=0;i<titles.length;i++)
             {
              titlearr += titles[i] +  "$";
             }
         String [] descs = (String[]) session.getAttribute("dec");
-        String descarr = "";
+        
         for(int i=0;i<descs.length;i++)
         {   
             descarr += descs[i] +  "$";
         }
+        }
+        
         %>
   <!--  <form action="getas" method="getassigns">   
         <input type="submit" value = "refresh">

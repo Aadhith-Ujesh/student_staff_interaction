@@ -44,7 +44,9 @@ public class Login extends HttpServlet {
         } catch (SQLException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
                 getpetition hey = new getpetition();
+        
         try {
             hey.getpet(request, response);
         } catch (SQLException ex) {

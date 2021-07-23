@@ -23,15 +23,13 @@ public class sumbitdetails extends HttpServlet {
     
     String link = request.getParameter("submitlink");
     System.out.println(link);
-//    char i = link.charAt(0);
-//    int id = Character.getNumericValue(i);
+
     int id = Integer.parseInt(request.getParameter("id"))-1;
     System.out.println(id);
     System.out.println("im at sumbitdetailsdao");
     HttpSession session=request.getSession();
     String [] titles = (String[]) session.getAttribute("titles");
-//    for(int j=0;j<titles.length();j++)
-//    {System.out.println(titles);}
+
     String user = session.getAttribute("username").toString();
     submitdao hello = new submitdao();
     System.out.println(titles[id]);

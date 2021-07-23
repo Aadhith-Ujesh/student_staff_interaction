@@ -20,7 +20,7 @@
 </head>
 <body>
      <%  
-    response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+        response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
         response.setHeader("Pragma","no-cache");
         response.setHeader("Expires","0");
         if(session.getAttribute("username")==null)
@@ -95,7 +95,7 @@
     </footer>
         
     <script>
-        
+        console.log(titles);
         var titles = "<%=titlearr%>";
         var description = "<%=descarr%>";
         var titles = titles.split("$");
@@ -105,7 +105,7 @@
         for(let i = 0; i<titles.length-1; i++)
         {
             
-            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + titles[i] +"<br>"+description[i] + "</div> </p>";
+            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + titles[i] +"<br>"+description[i] + "<form class = 'assub' action='likedetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "> <input type='submit' value='like'> </form> </div> </p>";
         }
 
     </script>
