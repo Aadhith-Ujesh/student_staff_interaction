@@ -29,24 +29,32 @@
         }
         String titlearr="";
         String descarr = "";
-        int al = (Integer)session.getAttribute("aadhithlike");
-        int sl = (Integer)session.getAttribute("sudharsanlike");
-        int arl = (Integer)session.getAttribute("aravindlike");
-        if(al+sl+arl > 1){
-        String [] titles = (String[]) session.getAttribute("head");
+        String[] al = (String [])session.getAttribute("aadhithlike");
+        String[] sl = (String [])session.getAttribute("sudharsanlike");
+        String[] arl = (String [])session.getAttribute("aravindlike");
         
-        for(int i=0;i<titles.length;i++)
-            {
-             titlearr += titles[i] +  "$";
-            }
+        String [] titles = (String[]) session.getAttribute("head");
         String [] descs = (String[]) session.getAttribute("dec");
         
-        for(int i=0;i<descs.length;i++)
-        {   
-            descarr += descs[i] +  "$";
-        }
+        for(int j = 0;j<titles.length;j++){
+            
+//        for(int i=0;i<titles.length;i++)
+//            {
+//             titlearr += titles[i] +  "$";
+//            }
+//        
+//        
+//        for(int i=0;i<descs.length;i++)
+//        {   
+//            descarr += descs[i] +  "$";
+//        }
+        if(Integer.parseInt(al[j]) + Integer.parseInt(sl[j]) + Integer.parseInt(arl[j]) > 1)
+        {
+            titlearr += titles[j] + "$";
+            descarr += descs[j] +  "$";
         }
         
+        }
         %>
   <!--  <form action="getas" method="getassigns">   
         <input type="submit" value = "refresh">

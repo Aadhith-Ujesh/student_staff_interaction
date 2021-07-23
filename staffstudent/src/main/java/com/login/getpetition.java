@@ -71,17 +71,16 @@ public class getpetition extends HttpServlet
             String[] arlikeArr = new String[aravindlike.size()];
             arlikeArr = aravindlike.toArray(arlikeArr);
             
-            int al = Integer.parseInt(aadlikeArr[0]);
-            int sl = Integer.parseInt(sudlikeArr[0]);
-            int arl = Integer.parseInt(arlikeArr[0]);
-            
+//            int al = Integer.parseInt(aadlikeArr[0]);
+//            int sl = Integer.parseInt(sudlikeArr[0]);
+//            int arl = Integer.parseInt(arlikeArr[0]);
             
             HttpSession session=request.getSession();
             session.setAttribute("head", headArr);
             session.setAttribute("dec", decArr);
-            session.setAttribute("aadhithlike", al);
-            session.setAttribute("sudharsanlike", sl);
-            session.setAttribute("aravindlike", arl);
+            session.setAttribute("aadhithlike", aadlikeArr);
+            session.setAttribute("sudharsanlike", sudlikeArr);
+            session.setAttribute("aravindlike", arlikeArr);
             System.out.println("session successful for getpetition");
 //            System.out.println(titleArr.toString());
 //            System.out.println(descArr.toString());
