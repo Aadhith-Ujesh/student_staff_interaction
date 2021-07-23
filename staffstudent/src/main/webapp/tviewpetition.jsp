@@ -27,6 +27,25 @@
         {
              response.sendRedirect("login.jsp") ;
         }
+        String user = session.getAttribute("username").toString();
+        String [] likes = new String[0];
+        if(user.equals("sAadhith"))
+        {
+            likes = (String [])session.getAttribute("aadhithlike");
+        }
+        else if(user.equals("sSudharsan"))
+        {
+            likes = (String [])session.getAttribute("sudharsanlike");
+        }
+        else
+        {
+            likes = (String [])session.getAttribute("aravindlike");
+        }
+        String likearr="";
+        for(int i=0;i<likes.length;i++)
+        {
+             likearr += likes[i] +  "$";
+         }
         String [] titles = (String[]) session.getAttribute("head");
         String titlearr="";
         for(int i=0;i<titles.length;i++)
@@ -95,18 +114,30 @@
     </footer>
         
     <script>
+        function myfunc()
+        {
+            document.getElementById("likebut").style.background = "blue";
+        }
         console.log(titles);
         var titles = "<%=titlearr%>";
         var description = "<%=descarr%>";
+        var likes = "<%=likearr%>";
         var titles = titles.split("$");
         var description = description.split("$");
+        var likes = likes.split("$");
         console.log(titles);
         console.log(description);
         for(let i = 0; i<titles.length-1; i++)
         {
-            
-            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + titles[i] +"<br>"+description[i] + "<form class = 'assub' action='likedetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "> <input type='submit' value='like'> </form> </div> </p>";
-        }
+            if(likes[i]=== "1")
+            {
+            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + titles[i] +"<br>"+description[i] + "<form class = 'assub' action='likedetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "> <input type='submit' value='like' style='background-color:blue;'> </form> </div> </p>";
+            }
+            else
+            {
+            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + titles[i] +"<br>"+description[i] + "<form class = 'assub' action='likedetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "> <input id= 'likebut' type='submit' value='like' onclick='myfunc()'> </form> </div> </p>";
+            }
+    }
 
     </script>
 </body>
