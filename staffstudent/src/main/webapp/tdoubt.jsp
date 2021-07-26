@@ -57,6 +57,12 @@
         {   
             doubtsarr += doubts[i] +  "$";
         }
+        String [] mam = (String[]) session.getAttribute("mamreply");
+        String mamarr = "";
+        for(int i=0;i<mam.length;i++)
+        {   
+            mamarr += mam[i] +  "$";
+        }
         System.out.println(doubtsarr);
         %>
   <!--  <form action="getas" method="getassigns">   
@@ -78,7 +84,7 @@
     </nav>
     <div class="petition">
         
-        <h1 style="position: absolute; margin-top: 50px;margin-left: 45% ;">ASSIGNMENTS</h1>
+        <h1 style="position: absolute; margin-top: 50px;margin-left: 45% ;">DOUBTS</h1>
         <div id="cards" style="margin-top: 130px;">
 
         </div>
@@ -116,19 +122,20 @@
     </footer>
         
     <script>
-        
+        var mam="<%=mamarr%>";
         var titles = "<%=titlearr%>";
         var description = "<%=descarr%>";
         var doubtuser="<%=doubtsarr%>";
         var titles = titles.split("$");
         var description = description.split("$");
         var doubtsuser = doubtuser.split("$");
+        var mam = mam.split("$");
         console.log(titles);
         console.log(description);
         for(let i = 0; i<titles.length-1; i++)
         {
             console.log(titles[i]);
-            document.getElementById("cards").innerHTML+="<div class='hi'> <h2> " +doubtsuser[i]+"<br>"+titles[i] +"</h2> <p>"+description[i]  + "<form class = 'assub' action='submitdoubtdetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "><input type='text' name='submitreply' > <input type='submit' value='submit'> </form>" + "</p> </div>";
+            document.getElementById("cards").innerHTML+="<div class='hi'>  <h3>" +doubtsuser[i]+"<br>"+titles[i] +"</h3> <p>"+description[i]  + "<br><b> Your reply:<b><br>"+mam[i]+"<form class = 'assub' action='submitdoubtdetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "><input type='text' name='submitreply' > <input type='submit' value='submit'> </form>" + "</p> </div>";
         }
 
     </script>
