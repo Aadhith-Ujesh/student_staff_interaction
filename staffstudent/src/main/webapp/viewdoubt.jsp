@@ -1,3 +1,10 @@
+<%-- 
+    Document   : viewdoubt
+    Created on : 26-Jul-2021, 2:29:14 pm
+    Author     : SUDHARSAN
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-     <%  
+     <%  out.println("hi");
     response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
         response.setHeader("Pragma","no-cache");
         response.setHeader("Expires","0");
@@ -20,39 +27,42 @@
         {
              response.sendRedirect("login.jsp") ;
         }
-        String [] titles = (String[]) session.getAttribute("titles");
+        String [] titles = (String[]) session.getAttribute("doubttitles");
         String titlearr="";
         for(int i=0;i<titles.length;i++)
             {
              titlearr += titles[i] +  "$";
             }
-        String [] descs = (String[]) session.getAttribute("descs");
+        String [] descs = (String[]) session.getAttribute("doubtdescs");
         String descarr = "";
         for(int i=0;i<descs.length;i++)
         {   
             descarr += descs[i] +  "$";
         }
+        String [] mam = (String[]) session.getAttribute("mamreply");
+        String mamarr = "";
+        for(int i=0;i<mam.length;i++)
+        {   
+            mamarr += mam[i] +  "$";
+        }
+        
         %>
-  <!--  <form action="getas" method="getassigns">   
-        <input type="submit" value = "refresh">
-    </form>-->
-<!--    <a href="/staffstudent/getas">refresh</a>-->
+  
     <img src="PicsArt_07-22-11.41.53.png" id="logo">
     <nav class="navbar">
         <h1 id="headi">TEAMS 2.0</h1>
             <div class="links">
                 <ul>
-                       <li class="zy"><a href= "/staffstudent/doassign.jsp">Assignment</a></li>
-                        <li class="zy"><a href= "/staffstudent/petition.jsp">Petition</a></li>  
-                        <li class="zy"><a href= "/staffstudent/sdoubt.jsp">Doubts</a></li> 
-                        <li class="zy"><a href= "/staffstudent/Logout">Logout</a></li> 
-           
+                       <li class="zy"><a href= "/staffstudent/tassignment.jsp">Assignment</a></li>
+                        <li class="zy"><a href= "/staffstudent/tpetition.jsp">Petition</a></li> 
+                        <li class="zy"><a href= "/staffstudent/sdoubt.jsp">Doubts</a></li>
+                        <li class="zy"><a href= "/staffstudent/Logout">Logout</a></li>   
                 </ul>
             </div>
     </nav>
     <div class="petition">
         
-        <h1 style="position: absolute; margin-top: 50px;margin-left: 45% ;">ASSIGNMENTS</h1>
+        <h1 style="position: absolute; margin-top: 50px;margin-left: 45%;">DOUBTS:</h1>
         <div id="cards" style="margin-top: 130px;">
 
         </div>
@@ -73,7 +83,7 @@
                 </p>
             </div>
             <div class="clear made">
-                <p> TEAMS 2.0 is designed by a trio. MS Teams takes 1 GB of memory which we consider as a waste of storage when we go back to offline classes. So this is an alternative to TEAMS 2.0. We hope MIT recognizes our website and makes it official. It contains all the features which are required during offline classes  </p>
+                <p>TEAMS 2.0 is designed by a trio. MS Teams takes 1 GB of memory which we consider as a waste of storage when we go back to offline classes. So this is an alternative to TEAMS 2.0. We hope MIT recognizes our website and makes it official. It contains all the features which are required during offline classes  </p>
             </div>
         </div>
         <div>
@@ -93,16 +103,17 @@
         
         var titles = "<%=titlearr%>";
         var description = "<%=descarr%>";
+        var mam="<%=mamarr%>";
         var titles = titles.split("$");
         var description = description.split("$");
-        console.log(titles);
-        console.log(description);
+        var mam=mam.split("$");
+
         for(let i = 0; i<titles.length-1; i++)
         {
-            console.log(titles[i]);
-            document.getElementById("cards").innerHTML+="<div class='hi'> <h2> " +  titles[i] +"</h2> <p><br>"+description[i]  + "<form class = 'assub' action='sumbitdetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "><input type='text' name='submitlink' > <input type='submit' value='submit'> </form>" + "</p> </div>";
+        document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + titles[i] +"<br>"+description[i] +"<br> <b>NANCY MAM REPLY:</b> <br>"+mam[i] +"</p> </div> ";
         }
 
     </script>
 </body>
 </html>
+

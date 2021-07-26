@@ -52,6 +52,13 @@ public class Login extends HttpServlet {
         } catch (SQLException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
+        getdoubt dou = new getdoubt();
+        try {
+            session.setAttribute("username",user);
+            dou.getdoubts(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
                 if(user.charAt(0)=='s')
                 {
 //                   getas hi = new getas();

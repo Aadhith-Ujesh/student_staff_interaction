@@ -1,3 +1,10 @@
+<%-- 
+    Document   : tdoubt
+    Created on : 26-Jul-2021, 2:29:23 pm
+    Author     : SUDHARSAN
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,13 +27,13 @@
         {
              response.sendRedirect("login.jsp") ;
         }
-        String [] titles = (String[]) session.getAttribute("titles");
+        String [] titles = (String[]) session.getAttribute("doubttitles");
         String titlearr="";
         for(int i=0;i<titles.length;i++)
             {
              titlearr += titles[i] +  "$";
             }
-        String [] descs = (String[]) session.getAttribute("descs");
+        String [] descs = (String[]) session.getAttribute("doubtdescs");
         String descarr = "";
         for(int i=0;i<descs.length;i++)
         {   
@@ -42,9 +49,9 @@
         <h1 id="headi">TEAMS 2.0</h1>
             <div class="links">
                 <ul>
-                       <li class="zy"><a href= "/staffstudent/doassign.jsp">Assignment</a></li>
-                        <li class="zy"><a href= "/staffstudent/petition.jsp">Petition</a></li>  
-                        <li class="zy"><a href= "/staffstudent/sdoubt.jsp">Doubts</a></li> 
+                       <li class="zy"><a href= "/staffstudent/tassignment.jsp">Assignment</a></li>
+                        <li class="zy"><a href= "/staffstudent/tpetition.jsp">Petition</a></li>  
+                        <li class="zy"><a href= "/staffstudent/tdoubt.jsp">Doubts</a></li> 
                         <li class="zy"><a href= "/staffstudent/Logout">Logout</a></li> 
            
                 </ul>
@@ -100,9 +107,10 @@
         for(let i = 0; i<titles.length-1; i++)
         {
             console.log(titles[i]);
-            document.getElementById("cards").innerHTML+="<div class='hi'> <h2> " +  titles[i] +"</h2> <p><br>"+description[i]  + "<form class = 'assub' action='sumbitdetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "><input type='text' name='submitlink' > <input type='submit' value='submit'> </form>" + "</p> </div>";
+            document.getElementById("cards").innerHTML+="<div class='hi'> <h2> " +  titles[i] +"</h2> <p><br>"+description[i]  + "<form class = 'assub' action='submitdoubtdetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "><input type='text' name='submitreply' > <input type='submit' value='submit'> </form>" + "</p> </div>";
         }
 
     </script>
 </body>
 </html>
+

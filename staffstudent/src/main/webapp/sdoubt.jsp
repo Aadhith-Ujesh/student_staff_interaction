@@ -1,9 +1,10 @@
 <%-- 
-    Document   : tassignment
-    Created on : 15 Jul, 2021, 9:38:57 PM
-    Author     : USERi
+    Document   : sdoubt
+    Created on : 26-Jul-2021, 2:25:04 pm
+    Author     : SUDHARSAN
 --%>
 
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,17 +35,17 @@
             <div class="links">
                 <ul>
                         <li class="zy"><a href= "/staffstudent/tassignment.jsp">Assignment</a></li>
-                        <li class="zy"><a href= "/staffstudent/tpetition.jsp">Petition</a></li>  
-                        <li class="zy"><a href= "/staffstudent/tdoubt.jsp">Doubts</a></li>
+                        <li class="zy"><a href= "/staffstudent/tpetition.jsp">Petition</a></li>
+                        <li class="zy"><a href= "/staffstudent/sdoubt.jsp">Doubts</a></li>
                         <li class="zy"><a href= "/staffstudent/Logout">Logout</a></li>   
                 </ul>
             </div>
     </nav>
   <div class="split">
         <form  class="teacher">
-        <h1><u><b>ASSIGNMENTS</b></u></h1>
-        <input type="button" value="CREATE ASSIGNMENT" onclick="window.location='createassign.jsp'">
-        <input type="button" value="VIEW ASSIGNMENTS" onclick="window.location='tviewassign.jsp'">
+        <h1><u><b>DOUBT SECTION</b></u></h1>
+        <input type="button" value="ASK A DOUBT" onclick="window.location='askdoubt.jsp'">
+        <input type="button" value="VIEW DOUBTS" onclick="window.location='viewdoubt.jsp'">
         </form>
  </div> 
     <footer style="background-color:rgb(73, 18, 18);position:absolute;margin-top: 100vh;">

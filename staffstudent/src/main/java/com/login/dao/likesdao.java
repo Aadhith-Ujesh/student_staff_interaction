@@ -27,9 +27,9 @@ import javax.servlet.http.HttpServletResponse;
 public class likesdao extends HttpServlet {
 
 //    String sql = "insert into petitions values(?,?)";
-    String url = "jdbc:mysql://localhost:3306/login?autoReconnect=true&useSSL=false";
+    String url = "jdbc:mysql://localhost:3307/login?autoReconnect=true&useSSL=false";
     String username = "root";
-    String password = "Vishak1@3";
+    String password = "sudharsan123!@";
     public void update(String user,String head) throws SQLException, ClassNotFoundException
     {  System.out.println("hey");
         try {

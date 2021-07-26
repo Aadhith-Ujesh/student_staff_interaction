@@ -44,6 +44,26 @@
         <servlet-name>likedetails</servlet-name>
         <servlet-class>com.login.likedetails</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>doubtdetails</servlet-name>
+        <servlet-class>com.login.doubtdetails</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>doubtdao</servlet-name>
+        <servlet-class>com.login.dao.doubtdao</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>getdoubt</servlet-name>
+        <servlet-class>com.login.getdoubt</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>submitdoubtdetails</servlet-name>
+        <servlet-class>com.login.submitdoubtdetails</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>submitdoubtdao</servlet-name>
+        <servlet-class>com.login.dao.submitdoubtdao</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -107,6 +127,26 @@
     <servlet-mapping>
         <servlet-name>likedetails</servlet-name>
         <url-pattern>/likedetails</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>doubtdetails</servlet-name>
+        <url-pattern>/doubtdetails</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>doubtdao</servlet-name>
+        <url-pattern>/doubtdao</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>getdoubt</servlet-name>
+        <url-pattern>/getdoubt</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>submitdoubtdetails</servlet-name>
+        <url-pattern>/submitdoubtdetails</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>submitdoubtdao</servlet-name>
+        <url-pattern>/submitdoubtdao</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
