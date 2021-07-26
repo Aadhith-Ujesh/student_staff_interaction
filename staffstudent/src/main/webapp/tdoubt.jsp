@@ -39,6 +39,13 @@
         {   
             descarr += descs[i] +  "$";
         }
+        String [] doubts = (String[]) session.getAttribute("doubts");
+        String doubtsarr = "";
+        for(int i=0;i<doubts.length;i++)
+        {   
+            doubtsarr += doubts[i] +  "$";
+        }
+        System.out.println(doubtsarr);
         %>
   <!--  <form action="getas" method="getassigns">   
         <input type="submit" value = "refresh">
@@ -100,14 +107,16 @@
         
         var titles = "<%=titlearr%>";
         var description = "<%=descarr%>";
+        var doubtuser="<%=doubtsarr%>";
         var titles = titles.split("$");
         var description = description.split("$");
+        var doubtsuser = doubtuser.split("$");
         console.log(titles);
         console.log(description);
         for(let i = 0; i<titles.length-1; i++)
         {
             console.log(titles[i]);
-            document.getElementById("cards").innerHTML+="<div class='hi'> <h2> " +  titles[i] +"</h2> <p><br>"+description[i]  + "<form class = 'assub' action='submitdoubtdetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "><input type='text' name='submitreply' > <input type='submit' value='submit'> </form>" + "</p> </div>";
+            document.getElementById("cards").innerHTML+="<div class='hi'> <h2> " +doubtsuser[i]+"<br>"+titles[i] +"</h2> <p>"+description[i]  + "<form class = 'assub' action='submitdoubtdetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "><input type='text' name='submitreply' > <input type='submit' value='submit'> </form>" + "</p> </div>";
         }
 
     </script>

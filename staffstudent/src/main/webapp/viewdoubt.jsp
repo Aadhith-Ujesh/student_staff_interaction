@@ -45,7 +45,13 @@
         {   
             mamarr += mam[i] +  "$";
         }
-        
+        String [] doubts = (String[]) session.getAttribute("doubts");
+        String doubtsarr = "";
+        for(int i=0;i<doubts.length;i++)
+        {   
+            doubtsarr += doubts[i] +  "$";
+        }
+        System.out.println(doubtsarr);
         %>
   
     <img src="PicsArt_07-22-11.41.53.png" id="logo">
@@ -53,8 +59,8 @@
         <h1 id="headi">TEAMS 2.0</h1>
             <div class="links">
                 <ul>
-                       <li class="zy"><a href= "/staffstudent/tassignment.jsp">Assignment</a></li>
-                        <li class="zy"><a href= "/staffstudent/tpetition.jsp">Petition</a></li> 
+                       <li class="zy"><a href= "/staffstudent/doassign.jsp">Assignment</a></li>
+                        <li class="zy"><a href= "/staffstudent/petition.jsp">Petition</a></li> 
                         <li class="zy"><a href= "/staffstudent/sdoubt.jsp">Doubts</a></li>
                         <li class="zy"><a href= "/staffstudent/Logout">Logout</a></li>   
                 </ul>
@@ -104,13 +110,16 @@
         var titles = "<%=titlearr%>";
         var description = "<%=descarr%>";
         var mam="<%=mamarr%>";
+        var doubtsuser="<%=doubtsarr%>";
         var titles = titles.split("$");
         var description = description.split("$");
         var mam=mam.split("$");
-
+        var doubtsuser = doubtsuser.split("$");
+        console.log(doubtsuser);
         for(let i = 0; i<titles.length-1; i++)
         {
-        document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + titles[i] +"<br>"+description[i] +"<br> <b>NANCY MAM REPLY:</b> <br>"+mam[i] +"</p> </div> ";
+           
+        document.getElementById("cards").innerHTML+="<div class='hi'> <p> <b>" +doubtsuser[i]+"<br>"+ titles[i] +"</b><br>"+description[i] +"<br> <b>NANCY MAM REPLY:</b> <br>"+mam[i] +"</p> </div> ";
         }
 
     </script>

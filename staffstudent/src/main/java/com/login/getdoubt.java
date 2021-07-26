@@ -43,13 +43,14 @@ public class getdoubt extends HttpServlet
             ArrayList<String> titles = new ArrayList<String>();
             ArrayList<String> decs = new ArrayList<String>();
             ArrayList<String> mam = new ArrayList<String>();
+            ArrayList<String> doubts = new ArrayList<String>();
             ResultSet rs = st.executeQuery();
             while( rs.next() )
             {
                 titles.add(rs.getString(1));
                 decs.add(rs.getString(2));
                 mam.add(rs.getString(3));
-                
+                doubts.add(rs.getString(4));
             }
             String[] titleArr = new String[titles.size()];
             titleArr = titles.toArray(titleArr);
@@ -60,10 +61,17 @@ public class getdoubt extends HttpServlet
             String[] mamArr = new String[mam.size()];
             mamArr = mam.toArray(mamArr);
             
+             String[] doubtsArr = new String[doubts.size()];
+            doubtsArr = doubts.toArray(doubtsArr);
+            for(int i=0;i<doubtsArr.length;i++)
+            {
+            System.out.println(doubtsArr[i]);
+            }
             HttpSession session=request.getSession();
             session.setAttribute("doubttitles", titleArr);
             session.setAttribute("doubtdescs", descArr);
             session.setAttribute("mamreply", mamArr);
+            session.setAttribute("doubts", doubtsArr);
             System.out.println("session successful for getas");
 //            System.out.println(titleArr.toString());
 //            System.out.println(descArr.toString());

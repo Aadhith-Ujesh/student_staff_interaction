@@ -54,7 +54,6 @@ public class Login extends HttpServlet {
         }
         getdoubt dou = new getdoubt();
         try {
-            session.setAttribute("username",user);
             dou.getdoubts(request, response);
         } catch (SQLException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);

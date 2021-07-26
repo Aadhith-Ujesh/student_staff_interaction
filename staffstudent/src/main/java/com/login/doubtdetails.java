@@ -15,6 +15,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -36,10 +37,12 @@ public class doubtdetails extends HttpServlet {
     
     String title = request.getParameter("title");
     String desc = request.getParameter("description");
+    HttpSession session=request.getSession();
+    String user=session.getAttribute("username").toString();
     System.out.println("im at assignmentdetailsdao");
     doubtdao doubt = new doubtdao();
         try {
-            doubt.update(title,desc);
+            doubt.update(title,desc,user);
             response.sendRedirect("askdoubt.jsp");
         } catch (SQLException ex) {
             Logger.getLogger(assignmentdetails.class.getName()).log(Level.SEVERE, null, ex);
