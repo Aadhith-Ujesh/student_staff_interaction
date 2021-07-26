@@ -129,10 +129,10 @@
     </footer>
         
     <script>
-        function myfunc()
-        {
-            document.getElementById("likebut").style.background = "blue";
-        }
+//        function myfunc()
+//        {
+//            document.getElementById("likebut").style.background = "blue";
+//        }
         console.log(titles);
         var titles = "<%=titlearr%>";
         var description = "<%=descarr%>";
@@ -150,9 +150,9 @@
             }
             else
             {
-            document.getElementById("cards").innerHTML+="<div class='hi'> <h2> " + titles[i] +"</h2><br><p>"+description[i] + "<form class = 'assub' action='likedetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "> <input id= 'likebut' type='submit' value='like' onclick='myfunc()'> </form> </div> </p>";
+            document.getElementById("cards").innerHTML+="<div class='hi'> <h2> " + titles[i] +"</h2><br><p>"+description[i] + "<form class = 'assub' action='likedetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "> <input id= 'likebut' type='submit' value='like'> </form> </div> </p>";
             }
-    }
+        }
 
     </script>
 </body>
