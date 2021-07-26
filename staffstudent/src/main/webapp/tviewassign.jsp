@@ -1,3 +1,10 @@
+<%@page import="com.login.Login"%>
+<%@page import="java.util.logging.Logger"%>
+<%@page import="java.util.logging.Logger"%>
+<%@page import="java.util.logging.Level"%>
+<%@page import="java.util.logging.Level"%>
+<%@page import="java.sql.SQLException"%>
+<%@page import="com.login.getas"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,13 +19,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-     <%  out.println("hi");
+     <%  
     response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
         response.setHeader("Pragma","no-cache");
         response.setHeader("Expires","0");
         if(session.getAttribute("username")==null)
         {
              response.sendRedirect("login.jsp") ;
+        }
+        getas hi = new getas();
+        try {
+            hi.getassigns(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
         String [] titles = (String[]) session.getAttribute("titles");
         String [] Aadhith = (String[]) session.getAttribute("aadhith");
@@ -149,7 +162,7 @@
          {
              ar = "submitted";
          }
-        document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + titles[i] +"<br>"+description[i]+"<br> Aadhith:" + "<a href='"+ aadhith[i]+"'>"+a+"</a>" +"<br> Sudharsan:" + "<a href='"+sudharsan[i]+"'>"+s+"</a>" + "<br> Aravind:" + "<a href='"+aravind[i]+"'>"+ar+"</a>" + "</p> </div> ";
+        document.getElementById("cards").innerHTML+="<div class='hi'> <h2> " + titles[i] +"</h2><p>"+description[i]+"<br><br> Aadhith:" + "<a href='"+ aadhith[i]+"'>"+a+"</a>" +"<br> Sudharsan:" + "<a href='"+sudharsan[i]+"'>"+s+"</a>" + "<br> Aravind:" + "<a href='"+aravind[i]+"'>"+ar+"</a>" + "</p> </div> ";
         }
 
     </script>

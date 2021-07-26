@@ -4,6 +4,12 @@
     Author     : SUDHARSAN
 --%>
 
+<%@page import="com.login.Login"%>
+<%@page import="java.util.logging.Logger"%>
+<%@page import="java.util.logging.Level"%>
+<%@page import="java.util.logging.Level"%>
+<%@page import="java.sql.SQLException"%>
+<%@page import="com.login.getpetition"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,6 +32,13 @@
         if(session.getAttribute("username")==null)
         {
              response.sendRedirect("login.jsp") ;
+        }
+        getpetition hey = new getpetition();
+        
+        try {
+            hey.getpet(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
         String titlearr="";
         String descarr = "";
@@ -122,7 +135,7 @@
         for(let i = 0; i<titles.length-1; i++)
         {
             
-            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + titles[i] +"<br>"+description[i] + "</div> </p>";
+            document.getElementById("cards").innerHTML+="<div class='hi'>  <h2>" + titles[i] +"</h2><br><p>"+description[i] + "</div> </p>";
         }
 
     </script>

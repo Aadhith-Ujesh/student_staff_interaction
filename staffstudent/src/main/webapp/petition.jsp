@@ -1,3 +1,9 @@
+<%@page import="com.login.Login"%>
+<%@page import="java.util.logging.Level"%>
+<%@page import="java.util.logging.Logger"%>
+<%@page import="java.util.logging.Level"%>
+<%@page import="java.sql.SQLException"%>
+<%@page import="com.login.getpetition"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +26,13 @@
         if(session.getAttribute("username")==null)
         {
              response.sendRedirect("login.jsp") ;
+        }
+        getpetition hey = new getpetition();
+        
+        try {
+            hey.getpet(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
         %>
     <img src="PicsArt_07-22-11.41.53.png" id="logo">

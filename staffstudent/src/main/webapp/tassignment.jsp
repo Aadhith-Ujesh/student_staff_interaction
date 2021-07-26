@@ -4,6 +4,12 @@
     Author     : USERi
 --%>
 
+<%@page import="com.login.Login"%>
+<%@page import="java.util.logging.Logger"%>
+<%@page import="java.util.logging.Logger"%>
+<%@page import="java.util.logging.Level"%>
+<%@page import="java.sql.SQLException"%>
+<%@page import="com.login.getas"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +32,12 @@
         {
             response.sendRedirect("login.jsp");
         }
-        
+        getas hi = new getas();
+        try {
+            hi.getassigns(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
     %>
         <img src="PicsArt_07-22-11.41.53.png" id="logo">
     <nav class="navbar">

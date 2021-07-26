@@ -25,9 +25,9 @@ import javax.servlet.http.HttpServletResponse;
 public class submitdoubtdao
 {
 //    String sql = "insert into assignments values(?,?)";
-    String url = "jdbc:mysql://localhost:3307/login?autoReconnect=true&useSSL=false";
+    String url = "jdbc:mysql://localhost:3306/login?autoReconnect=true&useSSL=false";
     String username = "root";
-    String password = "sudharsan123!@";
+    String password = "Vishak1@3";
     public void update(String user, String reply ,String title) throws SQLException
     {  System.out.println("hey");
         try {

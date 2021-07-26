@@ -4,6 +4,12 @@
     Author     : SUDHARSAN
 --%>
 
+<%@page import="com.login.Login"%>
+<%@page import="java.util.logging.Logger"%>
+<%@page import="java.util.logging.Level"%>
+<%@page import="java.util.logging.Level"%>
+<%@page import="java.sql.SQLException"%>
+<%@page import="com.login.getdoubt"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +33,12 @@
         {
             response.sendRedirect("login.jsp");
         }
-        
+        getdoubt dou = new getdoubt();
+        try {
+            dou.getdoubts(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
     %>
         <img src="PicsArt_07-22-11.41.53.png" id="logo">
     <nav class="navbar">
@@ -43,7 +54,7 @@
     </nav>
   <div class="split">
         <form  class="teacher">
-        <h1><u><b>DOUBT SECTION</b></u></h1>
+        <h1><u><b>DOUBTS SECTION</b></u></h1>
         <input type="button" value="ASK A DOUBT" onclick="window.location='askdoubt.jsp'">
         <input type="button" value="VIEW DOUBTS" onclick="window.location='viewdoubt.jsp'">
         </form>

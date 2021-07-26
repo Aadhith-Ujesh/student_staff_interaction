@@ -4,6 +4,12 @@
     Author     : SUDHARSAN
 --%>
 
+<%@page import="com.login.Login"%>
+<%@page import="java.util.logging.Logger"%>
+<%@page import="java.util.logging.Level"%>
+<%@page import="java.util.logging.Level"%>
+<%@page import="java.sql.SQLException"%>
+<%@page import="com.login.getdoubt"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +33,12 @@
         if(session.getAttribute("username")==null)
         {
             response.sendRedirect("login.jsp");
+        }
+        getdoubt dou = new getdoubt();
+        try {
+            dou.getdoubts(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
         %>
     --> 

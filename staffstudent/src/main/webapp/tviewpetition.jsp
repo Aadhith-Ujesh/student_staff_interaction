@@ -4,6 +4,13 @@
     Author     : SUDHARSAN
 --%>
 
+<%@page import="com.login.Login"%>
+<%@page import="com.login.Login"%>
+<%@page import="java.util.logging.Logger"%>
+<%@page import="java.util.logging.Level"%>
+<%@page import="java.util.logging.Level"%>
+<%@page import="java.sql.SQLException"%>
+<%@page import="com.login.getpetition"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,6 +33,13 @@
         if(session.getAttribute("username")==null)
         {
              response.sendRedirect("login.jsp") ;
+        }
+        getpetition hey = new getpetition();
+        
+        try {
+            hey.getpet(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
         String user = session.getAttribute("username").toString();
         String [] likes = new String[0];
@@ -132,11 +146,11 @@
         {
             if(likes[i]=== "1")
             {
-            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + titles[i] +"<br>"+description[i] + "<form class = 'assub' action='likedetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "> <input type='submit' value='like' style='background-color:blue;'> </form> </div> </p>";
+            document.getElementById("cards").innerHTML+="<div class='hi'> <h2> " + titles[i] +"</h2><br><p>"+description[i] + "<form class = 'assub' action='likedetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "> <input type='submit' value='like' style='background-color:blue;'> </form> </div> </p>";
             }
             else
             {
-            document.getElementById("cards").innerHTML+="<div class='hi'> <p> " + titles[i] +"<br>"+description[i] + "<form class = 'assub' action='likedetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "> <input id= 'likebut' type='submit' value='like' onclick='myfunc()'> </form> </div> </p>";
+            document.getElementById("cards").innerHTML+="<div class='hi'> <h2> " + titles[i] +"</h2><br><p>"+description[i] + "<form class = 'assub' action='likedetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "> <input id= 'likebut' type='submit' value='like' onclick='myfunc()'> </form> </div> </p>";
             }
     }
 

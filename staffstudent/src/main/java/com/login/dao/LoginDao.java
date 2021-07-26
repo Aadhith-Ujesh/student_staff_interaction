@@ -21,9 +21,9 @@ import java.sql.*;
 public class LoginDao 
 {
     String sql = "select * from clogin where user=? and pass=?";
-    String url = "jdbc:mysql://localhost:3307/login?autoReconnect=true&useSSL=false";
+    String url = "jdbc:mysql://localhost:3306/login?autoReconnect=true&useSSL=false";
     String username = "root";
-    String password = "sudharsan123!@";
+    String password = "Vishak1@3";
     public boolean check(String uname,String pass) throws SQLException
     {
         try {

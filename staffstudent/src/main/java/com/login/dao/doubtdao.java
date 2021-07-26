@@ -26,9 +26,9 @@ import javax.servlet.http.HttpServletResponse;
 public class doubtdao extends HttpServlet 
 {
     String sql = "insert into doubts(heading,description,user) values(?,?,?)";
-    String url = "jdbc:mysql://localhost:3307/login?autoReconnect=true&useSSL=false";
+    String url = "jdbc:mysql://localhost:3306/login?autoReconnect=true&useSSL=false";
     String username = "root";
-    String password = "sudharsan123!@";
+    String password = "Vishak1@3";
     public void update(String title,String desc,String user) throws SQLException
     {  System.out.println("hey");
         try {
