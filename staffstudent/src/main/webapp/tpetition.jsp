@@ -135,7 +135,7 @@
         for(let i = 0; i<titles.length-1; i++)
         {
             
-            document.getElementById("cards").innerHTML+="<div class='hi'>  <h2>" + titles[i] +"</h2><br><p>"+description[i] + "</div> </p>";
+            document.getElementById("cards").innerHTML+="<div class='hi'>  <h2><u>" + titles[i] +"</u></h2><br><p>"+description[i] + "</div> </p>";
         }
 
     </script>

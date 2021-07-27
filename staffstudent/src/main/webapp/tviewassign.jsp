@@ -162,7 +162,7 @@
          {
              ar = "submitted";
          }
-        document.getElementById("cards").innerHTML+="<div class='hi'> <h2> " + titles[i] +"</h2><p>"+description[i]+"<br><br> Aadhith:" + "<a href='"+ aadhith[i]+"'>"+a+"</a>" +"<br> Sudharsan:" + "<a href='"+sudharsan[i]+"'>"+s+"</a>" + "<br> Aravind:" + "<a href='"+aravind[i]+"'>"+ar+"</a>" + "</p> </div> ";
+        document.getElementById("cards").innerHTML+="<div class='hi'> <h2> <u>" + titles[i] +"</u></h2><p>"+description[i]+"<br><br> Aadhith:" + "<a href='"+ aadhith[i]+"'>"+a+"</a>" +"<br> Sudharsan:" + "<a href='"+sudharsan[i]+"'>"+s+"</a>" + "<br> Aravind:" + "<a href='"+aravind[i]+"'>"+ar+"</a>" + "</p> </div> ";
         }
 
     </script>

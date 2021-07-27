@@ -42,7 +42,9 @@
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
         String user = session.getAttribute("username").toString();
+        
         String [] likes = new String[0];
+        
         if(user.equals("sAadhith"))
         {
             likes = (String [])session.getAttribute("aadhithlike");
@@ -72,6 +74,7 @@
         {   
             descarr += descs[i] +  "$";
         }
+        
         %>
   <!--  <form action="getas" method="getassigns">   
         <input type="submit" value = "refresh">
@@ -146,11 +149,11 @@
         {
             if(likes[i]=== "1")
             {
-            document.getElementById("cards").innerHTML+="<div class='hi'> <h2> " + titles[i] +"</h2><br><p>"+description[i] + "<form class = 'assub' action='likedetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "> <input type='submit' value='like' style='background-color:blue;'> </form> </div> </p>";
+            document.getElementById("cards").innerHTML+="<div class='hi'> <h2><u> " + titles[i] +"</u></h2><br><p>"+description[i] + "<form class = 'assub' action='likedetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "> <input type='submit' value='like' style='background-color:blue;'> </form></p> </div> ";
             }
             else
             {
-            document.getElementById("cards").innerHTML+="<div class='hi'> <h2> " + titles[i] +"</h2><br><p>"+description[i] + "<form class = 'assub' action='likedetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "> <input id= 'likebut' type='submit' value='like'> </form> </div> </p>";
+            document.getElementById("cards").innerHTML+="<div class='hi'> <h2> <u>" + titles[i] +"</u></h2><br><p>"+description[i] + "<form class = 'assub' action='likedetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "> <input id= 'likebut' type='submit' value='like'> </form></p> </div> ";
             }
         }
 

@@ -135,7 +135,7 @@
         for(let i = 0; i<titles.length-1; i++)
         {
             console.log(titles[i]);
-            document.getElementById("cards").innerHTML+="<div class='hi'>  <h3>" +doubtsuser[i]+"<br>"+titles[i] +"</h3> <p>"+description[i]  + "<br><b> Your reply:<b><br>"+mam[i]+"<form class = 'assub' action='submitdoubtdetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "><input type='text' name='submitreply' > <input type='submit' value='submit'> </form>" + "</p> </div>";
+            document.getElementById("cards").innerHTML+="<div class='hi'>  <p><b>Student : " +doubtsuser[i]+"</b><br><u><b>"+titles[i] +"</b></u><br>"+description[i] + "<br><br><b><u> Your reply:</u><b><br>"+mam[i]+"<form class = 'assub' action='submitdoubtdetails' method='POST'> <input type='text' name='id' value="+ (i+1) + "><input type='text' name='submitreply' > <input type='submit' value='submit'> </form>" + "</p> </div>";
         }
 
     </script>

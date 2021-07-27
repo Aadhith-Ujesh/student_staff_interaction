@@ -131,7 +131,7 @@
         for(let i = 0; i<titles.length-1; i++)
         {
            
-        document.getElementById("cards").innerHTML+="<div class='hi'> <p> <b>" +doubtsuser[i]+"<br>"+ titles[i] +"</b><br>"+description[i] +"<br> <b>NANCY MAM REPLY:</b> <br>"+mam[i] +"</p> </div> ";
+        document.getElementById("cards").innerHTML+="<div class='hi'> <p> <b>Student : " +doubtsuser[i]+"<br><u>"+ titles[i] +"</u></b><br>"+description[i] +"<br><br> <b><u>NANCY MAM REPLY:</u></b> <br>"+mam[i] +"</p> </div> ";
         }
 
     </script>
